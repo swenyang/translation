@@ -1,0 +1,789 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>新的内建方法 New Built-In Methods · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="promises.html" />
+    
+    
+    <link rel="prev" href="typed-array.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../react/">
+            
+                <a href="../../react/">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../react/api.html">
+            
+                <a href="../../react/api.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../react/component-specs-and-lifecycle.html">
+            
+                <a href="../../react/component-specs-and-lifecycle.html">
+            
+                    
+                    组件标准和生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../react/dom-differences.html">
+            
+                <a href="../../react/dom-differences.html">
+            
+                    
+                    与DOM的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../react/vdom.html">
+            
+                <a href="../../react/vdom.html">
+            
+                    
+                    React DOM（虚拟DOM）术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../react/event-system.html">
+            
+                <a href="../../react/event-system.html">
+            
+                    
+                    事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../react/forms.html">
+            
+                <a href="../../react/forms.html">
+            
+                    
+                    表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../react/tags-and-attributes.html">
+            
+                <a href="../../react/tags-and-attributes.html">
+            
+                    
+                    支持的Tag和Attribute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../react/web-components.html">
+            
+                <a href="../../react/web-components.html">
+            
+                    
+                    React与Web Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../../react/diff-algorithm.html">
+            
+                <a href="../../react/diff-algorithm.html">
+            
+                    
+                    Diff算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../../react/perf-addon.html">
+            
+                <a href="../../react/perf-addon.html">
+            
+                    
+                    性能检测工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    ECMAScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    ES6和ES5的对比
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="constants.html">
+            
+                <a href="constants.html">
+            
+                    
+                    常量 Constants
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="scoping.html">
+            
+                <a href="scoping.html">
+            
+                    
+                    作用域 Scoping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="arrow.html">
+            
+                <a href="arrow.html">
+            
+                    
+                    箭头函数 Arrow Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="param.html">
+            
+                <a href="param.html">
+            
+                    
+                    扩展参数处理 Extended Parameter Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="template.html">
+            
+                <a href="template.html">
+            
+                    
+                    模板字面量 Template Literals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="literals.html">
+            
+                <a href="literals.html">
+            
+                    
+                    扩展字面量 Extended Literals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="reg.html">
+            
+                <a href="reg.html">
+            
+                    
+                    扩展正则表达式 Enhanced Regular Expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="prop.html">
+            
+                <a href="prop.html">
+            
+                    
+                    扩展对象属性 Enhanced Object Properties
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="destruct.html">
+            
+                <a href="destruct.html">
+            
+                    
+                    解构赋值 Destructuring Assignment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="modules.html">
+            
+                <a href="modules.html">
+            
+                    
+                    模块 Modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="class.html">
+            
+                <a href="class.html">
+            
+                    
+                    类 Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="symbol.html">
+            
+                <a href="symbol.html">
+            
+                    
+                    Symbol类型 Symbol Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.13" data-path="iterator.html">
+            
+                <a href="iterator.html">
+            
+                    
+                    迭代器 Iterators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.14" data-path="generator.html">
+            
+                <a href="generator.html">
+            
+                    
+                    Generators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.15" data-path="set.html">
+            
+                <a href="set.html">
+            
+                    
+                    Map/Set & WeakMap/WeakSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.16" data-path="typed-array.html">
+            
+                <a href="typed-array.html">
+            
+                    
+                    类型数组 Typed Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.17" data-path="built-in.html">
+            
+                <a href="built-in.html">
+            
+                    
+                    新的内建方法 New Built-In Methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.18" data-path="promises.html">
+            
+                <a href="promises.html">
+            
+                    
+                    异步编程Promises
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.19" data-path="meta.html">
+            
+                <a href="meta.html">
+            
+                    
+                    元编程 Meta-Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.20" data-path="international.html">
+            
+                <a href="international.html">
+            
+                    
+                    国际化及本地化 Internationalization & Localization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >新的内建方法 New Built-In Methods</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x65B0;&#x7684;&#x5185;&#x5EFA;&#x65B9;&#x6CD5;-new-built-in-methods">&#x65B0;&#x7684;&#x5185;&#x5EFA;&#x65B9;&#x6CD5; New Built-In Methods</h1><h2 id="&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x8D4B;&#x503C;">&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x8D4B;&#x503C;</h2><p>&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x65B0;&#x65B9;&#x6CD5;&#x6765;&#x5C06;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6E90;&#x5BF9;&#x8C61;&#x7684;&#x53EF;&#x679A;&#x4E3E;&#x5C5E;&#x6027;&#x590D;&#x5236;&#x5230;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x4E0A;&#x3002;</p><ul><li><p>ES6</p><pre><code class="lang-js">  <span class="hljs-keyword">var</span> dst  = { quux: <span class="hljs-number">0</span> }
+  <span class="hljs-keyword">var</span> src1 = { foo: <span class="hljs-number">1</span>, bar: <span class="hljs-number">2</span> }
+  <span class="hljs-keyword">var</span> src2 = { foo: <span class="hljs-number">3</span>, baz: <span class="hljs-number">4</span> }
+  <span class="hljs-built_in">Object</span>.assign(dst, src1, src2)
+  dst.quux === <span class="hljs-number">0</span>
+  dst.foo  === <span class="hljs-number">3</span>
+  dst.bar  === <span class="hljs-number">2</span>
+  dst.baz  === <span class="hljs-number">4</span></code></pre>
+</li></ul>
+<ul><li><p>ES5</p><pre><code class="lang-js">  <span class="hljs-keyword">var</span> dst  = { quux: <span class="hljs-number">0</span> };
+  <span class="hljs-keyword">var</span> src1 = { foo: <span class="hljs-number">1</span>, bar: <span class="hljs-number">2</span> };
+  <span class="hljs-keyword">var</span> src2 = { foo: <span class="hljs-number">3</span>, baz: <span class="hljs-number">4</span> };
+  <span class="hljs-built_in">Object</span>.keys(src1).forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">k</span>) </span>{
+      dst[k] = src1[k];
+  });
+  <span class="hljs-built_in">Object</span>.keys(src2).forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+      dst[k] = src2[k];
+  });
+  dst.quux === <span class="hljs-number">0</span>;
+  dst.foo  === <span class="hljs-number">3</span>;
+  dst.bar  === <span class="hljs-number">2</span>;
+  dst.baz  === <span class="hljs-number">4</span>;</code></pre>
+</li></ul>
+<h2 id="&#x67E5;&#x627E;&#x6570;&#x7EC4;&#x5143;&#x7D20;">&#x67E5;&#x627E;&#x6570;&#x7EC4;&#x5143;&#x7D20;</h2><p>&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x65B0;&#x65B9;&#x6CD5;&#x6765;&#x67E5;&#x627E;&#x6570;&#x7EC4;&#x91CC;&#x9762;&#x7684;&#x5143;&#x7D20;&#x3002;</p><ul><li><p>ES6</p><pre><code class="lang-js">  [ <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span> ].find(x =&gt; x &gt; <span class="hljs-number">3</span>) <span class="hljs-comment">// 4</span></code></pre>
+</li></ul>
+<ul><li><p>ES5</p><pre><code class="lang-js">  [ <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span> ].filter(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">x</span>) </span>{ <span class="hljs-keyword">return</span> x &gt; <span class="hljs-number">3</span>; })[<span class="hljs-number">0</span>]; <span class="hljs-comment">// 4</span></code></pre>
+</li></ul>
+<h2 id="&#x5B57;&#x7B26;&#x4E32;&#x53CD;&#x590D;">&#x5B57;&#x7B26;&#x4E32;&#x53CD;&#x590D;</h2><p>&#x63D0;&#x4F9B;&#x65B0;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x53CD;&#x590D;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p><ul><li><p>ES6</p><pre><code class="lang-js">  <span class="hljs-string">&quot; &quot;</span>.repeat(<span class="hljs-number">4</span> * depth)
+  <span class="hljs-string">&quot;foo&quot;</span>.repeat(<span class="hljs-number">3</span>)</code></pre>
+</li></ul>
+<ul><li><p>ES5</p><pre><code class="lang-js">  <span class="hljs-built_in">Array</span>((<span class="hljs-number">4</span> * depth) + <span class="hljs-number">1</span>).join(<span class="hljs-string">&quot; &quot;</span>);
+  <span class="hljs-built_in">Array</span>(<span class="hljs-number">3</span> + <span class="hljs-number">1</span>).join(<span class="hljs-string">&quot;foo&quot;</span>);</code></pre>
+</li></ul>
+<h2 id="&#x5B57;&#x7B26;&#x4E32;&#x641C;&#x7D22;">&#x5B57;&#x7B26;&#x4E32;&#x641C;&#x7D22;</h2><p>&#x63D0;&#x4F9B;&#x66F4;&#x591A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x65B9;&#x6CD5;&#x6765;&#x641C;&#x7D22;&#x5B50;&#x4E32;&#x3002;</p><ul><li><p>ES6</p><pre><code class="lang-js">  <span class="hljs-string">&quot;hello&quot;</span>.startsWith(<span class="hljs-string">&quot;ello&quot;</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// true</span>
+  <span class="hljs-string">&quot;hello&quot;</span>.endsWith(<span class="hljs-string">&quot;hell&quot;</span>, <span class="hljs-number">4</span>)   <span class="hljs-comment">// true</span>
+  <span class="hljs-string">&quot;hello&quot;</span>.includes(<span class="hljs-string">&quot;ell&quot;</span>)       <span class="hljs-comment">// true</span>
+  <span class="hljs-string">&quot;hello&quot;</span>.includes(<span class="hljs-string">&quot;ell&quot;</span>, <span class="hljs-number">1</span>)    <span class="hljs-comment">// true</span>
+  <span class="hljs-string">&quot;hello&quot;</span>.includes(<span class="hljs-string">&quot;ell&quot;</span>, <span class="hljs-number">2</span>)    <span class="hljs-comment">// false</span></code></pre>
+</li></ul>
+<ul><li><p>ES5</p><pre><code class="lang-js">  <span class="hljs-string">&quot;hello&quot;</span>.indexOf(<span class="hljs-string">&quot;ello&quot;</span>) === <span class="hljs-number">1</span>;    <span class="hljs-comment">// true</span>
+  <span class="hljs-string">&quot;hello&quot;</span>.indexOf(<span class="hljs-string">&quot;hell&quot;</span>) === (<span class="hljs-number">4</span> - <span class="hljs-string">&quot;hell&quot;</span>.length); <span class="hljs-comment">// true</span>
+  <span class="hljs-string">&quot;hello&quot;</span>.indexOf(<span class="hljs-string">&quot;ell&quot;</span>) !== <span class="hljs-number">-1</span>;    <span class="hljs-comment">// true</span>
+  <span class="hljs-string">&quot;hello&quot;</span>.indexOf(<span class="hljs-string">&quot;ell&quot;</span>, <span class="hljs-number">1</span>) !== <span class="hljs-number">-1</span>; <span class="hljs-comment">// true</span>
+  <span class="hljs-string">&quot;hello&quot;</span>.indexOf(<span class="hljs-string">&quot;ell&quot;</span>, <span class="hljs-number">2</span>) !== <span class="hljs-number">-1</span>; <span class="hljs-comment">// false</span></code></pre>
+</li></ul>
+<h2 id="&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x68C0;&#x67E5;">&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x68C0;&#x67E5;</h2><p>&#x63D0;&#x4F9B;&#x65B0;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x68C0;&#x67E5;&#x975E;&#x6570;&#x5B57;&#x548C;&#x6709;&#x9650;&#x6570;&#x5B57;&#x3002;</p><ul><li><p>ES6</p><pre><code class="lang-js">  <span class="hljs-built_in">Number</span>.isNaN(<span class="hljs-number">42</span>) === <span class="hljs-literal">false</span>
+  <span class="hljs-built_in">Number</span>.isNaN(<span class="hljs-literal">NaN</span>) === <span class="hljs-literal">true</span>
+
+  <span class="hljs-built_in">Number</span>.isFinite(<span class="hljs-literal">Infinity</span>) === <span class="hljs-literal">false</span>
+  <span class="hljs-built_in">Number</span>.isFinite(-<span class="hljs-literal">Infinity</span>) === <span class="hljs-literal">false</span>
+  <span class="hljs-built_in">Number</span>.isFinite(<span class="hljs-literal">NaN</span>) === <span class="hljs-literal">false</span>
+  <span class="hljs-built_in">Number</span>.isFinite(<span class="hljs-number">123</span>) === <span class="hljs-literal">true</span></code></pre>
+</li></ul>
+<ul><li><p>ES5</p><pre><code class="lang-js">  <span class="hljs-keyword">var</span> <span class="hljs-built_in">isNaN</span> = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">n</span>) </span>{
+      <span class="hljs-keyword">return</span> n !== n;
+  };
+  <span class="hljs-keyword">var</span> <span class="hljs-built_in">isFinite</span> = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">v</span>) </span>{
+      <span class="hljs-keyword">return</span> (<span class="hljs-keyword">typeof</span> v === <span class="hljs-string">&quot;number&quot;</span> &amp;&amp; !<span class="hljs-built_in">isNaN</span>(v) &amp;&amp; v !== <span class="hljs-literal">Infinity</span> &amp;&amp; v !== -<span class="hljs-literal">Infinity</span>);
+  };
+  <span class="hljs-built_in">isNaN</span>(<span class="hljs-number">42</span>) === <span class="hljs-literal">false</span>;
+  <span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">NaN</span>) === <span class="hljs-literal">true</span>;
+
+  <span class="hljs-built_in">isFinite</span>(<span class="hljs-literal">Infinity</span>) === <span class="hljs-literal">false</span>;
+  <span class="hljs-built_in">isFinite</span>(-<span class="hljs-literal">Infinity</span>) === <span class="hljs-literal">false</span>;
+  <span class="hljs-built_in">isFinite</span>(<span class="hljs-literal">NaN</span>) === <span class="hljs-literal">false</span>;
+  <span class="hljs-built_in">isFinite</span>(<span class="hljs-number">123</span>) === <span class="hljs-literal">true</span>;</code></pre>
+</li></ul>
+<h2 id="&#x6570;&#x5B57;&#x5B89;&#x5168;&#x68C0;&#x67E5;">&#x6570;&#x5B57;&#x5B89;&#x5168;&#x68C0;&#x67E5;</h2><p>&#x63D0;&#x4F9B;&#x65B0;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x68C0;&#x67E5;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x662F;&#x4E0D;&#x662F;&#x5728;&#x5B89;&#x5168;&#x8303;&#x56F4;&#x5185;&#xFF0C;&#x5373;&#x662F;&#x4E0D;&#x662F;&#x80FD;&#x88AB;JavaScript&#x6B63;&#x786E;&#x8868;&#x793A;&#xFF08;&#x56E0;&#x4E3A;JavaScript&#x7684;&#x6240;&#x6709;&#x6570;&#x5B57;&#xFF0C;&#x5305;&#x62EC;&#x6574;&#x6570;&#xFF0C;&#x6280;&#x672F;&#x4E0A;&#x6765;&#x8BF4;&#x90FD;&#x662F;&#x6D6E;&#x70B9;&#x578B;&#xFF09;&#x3002;</p><ul><li><p>ES6</p><pre><code class="lang-js">  <span class="hljs-built_in">Number</span>.isSafeInteger(<span class="hljs-number">42</span>) === <span class="hljs-literal">true</span>
+  <span class="hljs-built_in">Number</span>.isSafeInteger(<span class="hljs-number">9007199254740992</span>) === <span class="hljs-literal">false</span></code></pre>
+</li></ul>
+<ul><li><p>ES5</p><pre><code class="lang-js">  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isSafeInteger</span> (<span class="hljs-params">n</span>) </span>{
+      <span class="hljs-keyword">return</span> (
+             <span class="hljs-keyword">typeof</span> n === <span class="hljs-string">&apos;number&apos;</span>
+          &amp;&amp; <span class="hljs-built_in">Math</span>.round(n) === n
+          &amp;&amp; -(<span class="hljs-built_in">Math</span>.pow(<span class="hljs-number">2</span>, <span class="hljs-number">53</span>) - <span class="hljs-number">1</span>) &lt;= n
+          &amp;&amp; n &lt;= (<span class="hljs-built_in">Math</span>.pow(<span class="hljs-number">2</span>, <span class="hljs-number">53</span>) - <span class="hljs-number">1</span>)
+      );
+  }
+  isSafeInteger(<span class="hljs-number">42</span>) === <span class="hljs-literal">true</span>;
+  isSafeInteger(<span class="hljs-number">9007199254740992</span>) === <span class="hljs-literal">false</span>;</code></pre>
+</li></ul>
+<h2 id="&#x6570;&#x5B57;&#x6BD4;&#x8F83;">&#x6570;&#x5B57;&#x6BD4;&#x8F83;</h2><p>&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#x503C;&#x3B5;&#x6765;&#x5B9E;&#x73B0;&#x66F4;&#x7CBE;&#x786E;&#x7684;&#x6D6E;&#x70B9;&#x578B;&#x6570;&#x5B57;&#x6BD4;&#x8F83;&#x3002;</p><ul><li><p>ES6</p><pre><code class="lang-js">  <span class="hljs-built_in">console</span>.log(<span class="hljs-number">0.1</span> + <span class="hljs-number">0.2</span> === <span class="hljs-number">0.3</span>) <span class="hljs-comment">// false</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.abs((<span class="hljs-number">0.1</span> + <span class="hljs-number">0.2</span>) - <span class="hljs-number">0.3</span>) &lt; <span class="hljs-built_in">Number</span>.EPSILON) <span class="hljs-comment">// true</span></code></pre>
+</li></ul>
+<ul><li><p>ES5</p><pre><code class="lang-js">  <span class="hljs-built_in">console</span>.log(<span class="hljs-number">0.1</span> + <span class="hljs-number">0.2</span> === <span class="hljs-number">0.3</span>); <span class="hljs-comment">// false</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.abs((<span class="hljs-number">0.1</span> + <span class="hljs-number">0.2</span>) - <span class="hljs-number">0.3</span>) &lt; <span class="hljs-number">2.220446049250313e-16</span>); <span class="hljs-comment">// true</span></code></pre>
+</li></ul>
+<h2 id="&#x6570;&#x5B57;&#x622A;&#x65AD;">&#x6570;&#x5B57;&#x622A;&#x65AD;</h2><p>&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x65B0;&#x65B9;&#x6CD5;&#x6765;&#x622A;&#x65AD;&#x6570;&#x5B57;&#x7684;&#x6574;&#x6570;&#x90E8;&#x5206;&#xFF0C;&#x5B8C;&#x5168;&#x629B;&#x5F03;&#x5176;&#x5C0F;&#x6570;&#x90E8;&#x5206;&#x3002;</p><ul><li><p>ES6</p><pre><code class="lang-js">  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.trunc(<span class="hljs-number">42.7</span>)) <span class="hljs-comment">// 42</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.trunc( <span class="hljs-number">0.1</span>)) <span class="hljs-comment">// 0</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.trunc(<span class="hljs-number">-0.1</span>)) <span class="hljs-comment">// -0</span></code></pre>
+</li></ul>
+<ul><li><p>ES5</p><pre><code class="lang-js">  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">mathTrunc</span> (<span class="hljs-params">x</span>) </span>{
+      <span class="hljs-keyword">return</span> (x &lt; <span class="hljs-number">0</span> ? <span class="hljs-built_in">Math</span>.ceil(x) : <span class="hljs-built_in">Math</span>.floor(x));
+  }
+  <span class="hljs-built_in">console</span>.log(mathTrunc(<span class="hljs-number">42.7</span>)) <span class="hljs-comment">// 42</span>
+  <span class="hljs-built_in">console</span>.log(mathTrunc( <span class="hljs-number">0.1</span>)) <span class="hljs-comment">// 0</span>
+  <span class="hljs-built_in">console</span>.log(mathTrunc(<span class="hljs-number">-0.1</span>)) <span class="hljs-comment">// -0</span></code></pre>
+</li></ul>
+<h2 id="&#x786E;&#x5B9A;&#x6570;&#x5B57;&#x7B26;&#x53F7;">&#x786E;&#x5B9A;&#x6570;&#x5B57;&#x7B26;&#x53F7;</h2><p>&#x63D0;&#x4F9B;&#x65B0;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x786E;&#x5B9A;&#x6570;&#x5B57;&#x7684;&#x7B26;&#x53F7;&#xFF0C;&#x5305;&#x62EC;&#x5E26;&#x7B26;&#x53F7;&#x7684;0&#x548C;&#x975E;&#x6570;&#x5B57;&#x7B49;&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#x3002;</p><ul><li><p>ES6</p><pre><code class="lang-js">  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.sign(<span class="hljs-number">7</span>))   <span class="hljs-comment">// 1</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.sign(<span class="hljs-number">0</span>))   <span class="hljs-comment">// 0</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.sign(<span class="hljs-number">-0</span>))  <span class="hljs-comment">// -0</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.sign(<span class="hljs-number">-7</span>))  <span class="hljs-comment">// -1</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.sign(<span class="hljs-literal">NaN</span>)) <span class="hljs-comment">// NaN</span></code></pre>
+</li></ul>
+<ul><li><p>ES5</p><pre><code class="lang-js">  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">mathSign</span> (<span class="hljs-params">x</span>) </span>{
+      <span class="hljs-keyword">return</span> ((x === <span class="hljs-number">0</span> || <span class="hljs-built_in">isNaN</span>(x)) ? x : (x &gt; <span class="hljs-number">0</span> ? <span class="hljs-number">1</span> : <span class="hljs-number">-1</span>));
+  }
+  <span class="hljs-built_in">console</span>.log(mathSign(<span class="hljs-number">7</span>))   <span class="hljs-comment">// 1</span>
+  <span class="hljs-built_in">console</span>.log(mathSign(<span class="hljs-number">0</span>))   <span class="hljs-comment">// 0</span>
+  <span class="hljs-built_in">console</span>.log(mathSign(<span class="hljs-number">-0</span>))  <span class="hljs-comment">// -0</span>
+  <span class="hljs-built_in">console</span>.log(mathSign(<span class="hljs-number">-7</span>))  <span class="hljs-comment">// -1</span>
+  <span class="hljs-built_in">console</span>.log(mathSign(<span class="hljs-literal">NaN</span>)) <span class="hljs-comment">// NaN</span></code></pre>
+</li></ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="typed-array.html" class="navigation navigation-prev " aria-label="Previous page: 类型数组 Typed Arrays">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="promises.html" class="navigation navigation-next " aria-label="Next page: 异步编程Promises">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"新的内建方法 New Built-In Methods","level":"1.3.1.17","depth":3,"next":{"title":"异步编程Promises","level":"1.3.1.18","depth":3,"path":"ecmascript/es6-vs-es5/promises.md","ref":"ecmascript/es6-vs-es5/promises.md","articles":[]},"previous":{"title":"类型数组 Typed Arrays","level":"1.3.1.16","depth":3,"path":"ecmascript/es6-vs-es5/typed-array.md","ref":"ecmascript/es6-vs-es5/typed-array.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ecmascript/es6-vs-es5/built-in.md","mtime":"2016-07-23T13:57:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-07-23T14:04:03.405Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

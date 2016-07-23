@@ -1,0 +1,699 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>元编程 Meta-Programming · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="international.html" />
+    
+    
+    <link rel="prev" href="promises.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../react/">
+            
+                <a href="../../react/">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../react/api.html">
+            
+                <a href="../../react/api.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../react/component-specs-and-lifecycle.html">
+            
+                <a href="../../react/component-specs-and-lifecycle.html">
+            
+                    
+                    组件标准和生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../react/dom-differences.html">
+            
+                <a href="../../react/dom-differences.html">
+            
+                    
+                    与DOM的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../react/vdom.html">
+            
+                <a href="../../react/vdom.html">
+            
+                    
+                    React DOM（虚拟DOM）术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../react/event-system.html">
+            
+                <a href="../../react/event-system.html">
+            
+                    
+                    事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../react/forms.html">
+            
+                <a href="../../react/forms.html">
+            
+                    
+                    表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../react/tags-and-attributes.html">
+            
+                <a href="../../react/tags-and-attributes.html">
+            
+                    
+                    支持的Tag和Attribute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../react/web-components.html">
+            
+                <a href="../../react/web-components.html">
+            
+                    
+                    React与Web Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../../react/diff-algorithm.html">
+            
+                <a href="../../react/diff-algorithm.html">
+            
+                    
+                    Diff算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../../react/perf-addon.html">
+            
+                <a href="../../react/perf-addon.html">
+            
+                    
+                    性能检测工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    ECMAScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    ES6和ES5的对比
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="constants.html">
+            
+                <a href="constants.html">
+            
+                    
+                    常量 Constants
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="scoping.html">
+            
+                <a href="scoping.html">
+            
+                    
+                    作用域 Scoping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="arrow.html">
+            
+                <a href="arrow.html">
+            
+                    
+                    箭头函数 Arrow Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="param.html">
+            
+                <a href="param.html">
+            
+                    
+                    扩展参数处理 Extended Parameter Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="template.html">
+            
+                <a href="template.html">
+            
+                    
+                    模板字面量 Template Literals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="literals.html">
+            
+                <a href="literals.html">
+            
+                    
+                    扩展字面量 Extended Literals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="reg.html">
+            
+                <a href="reg.html">
+            
+                    
+                    扩展正则表达式 Enhanced Regular Expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="prop.html">
+            
+                <a href="prop.html">
+            
+                    
+                    扩展对象属性 Enhanced Object Properties
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="destruct.html">
+            
+                <a href="destruct.html">
+            
+                    
+                    解构赋值 Destructuring Assignment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="modules.html">
+            
+                <a href="modules.html">
+            
+                    
+                    模块 Modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="class.html">
+            
+                <a href="class.html">
+            
+                    
+                    类 Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="symbol.html">
+            
+                <a href="symbol.html">
+            
+                    
+                    Symbol类型 Symbol Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.13" data-path="iterator.html">
+            
+                <a href="iterator.html">
+            
+                    
+                    迭代器 Iterators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.14" data-path="generator.html">
+            
+                <a href="generator.html">
+            
+                    
+                    Generators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.15" data-path="set.html">
+            
+                <a href="set.html">
+            
+                    
+                    Map/Set & WeakMap/WeakSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.16" data-path="typed-array.html">
+            
+                <a href="typed-array.html">
+            
+                    
+                    类型数组 Typed Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.17" data-path="built-in.html">
+            
+                <a href="built-in.html">
+            
+                    
+                    新的内建方法 New Built-In Methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.18" data-path="promises.html">
+            
+                <a href="promises.html">
+            
+                    
+                    异步编程Promises
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.19" data-path="meta.html">
+            
+                <a href="meta.html">
+            
+                    
+                    元编程 Meta-Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.20" data-path="international.html">
+            
+                <a href="international.html">
+            
+                    
+                    国际化及本地化 Internationalization & Localization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >元编程 Meta-Programming</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5143;&#x7F16;&#x7A0B;-meta-programming">&#x5143;&#x7F16;&#x7A0B; Meta-Programming</h1><h2 id="proxy">Proxy</h2><p>Proxy&#x7528;&#x4E8E;&#x4FEE;&#x6539;&#x67D0;&#x4E9B;&#x64CD;&#x4F5C;&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#xFF0C;&#x7B49;&#x540C;&#x4E8E;&#x5728;&#x8BED;&#x8A00;&#x5C42;&#x9762;&#x505A;&#x51FA;&#x4FEE;&#x6539;&#xFF0C;&#x6240;&#x4EE5;&#x5C5E;&#x4E8E;&#x4E00;&#x79CD;&#x201C;&#x5143;&#x7F16;&#x7A0B;&#x201D;&#xFF08;meta programming&#xFF09;&#xFF0C;&#x5373;&#x5BF9;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x8FDB;&#x884C;&#x7F16;&#x7A0B;&#x3002;Proxy&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x6210;&#xFF0C;&#x5728;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x4E4B;&#x524D;&#x67B6;&#x8BBE;&#x4E00;&#x5C42;&#x201C;&#x62E6;&#x622A;&#x201D;&#xFF0C;&#x5916;&#x754C;&#x5BF9;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;&#x8BBF;&#x95EE;&#xFF0C;&#x90FD;&#x5FC5;&#x987B;&#x5148;&#x901A;&#x8FC7;&#x8FD9;&#x5C42;&#x62E6;&#x622A;&#xFF0C;&#x56E0;&#x6B64;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x673A;&#x5236;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x5916;&#x754C;&#x7684;&#x8BBF;&#x95EE;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#x548C;&#x6539;&#x5199;&#x3002;Proxy&#x8FD9;&#x4E2A;&#x8BCD;&#x7684;&#x539F;&#x610F;&#x662F;&#x4EE3;&#x7406;&#xFF0C;&#x7528;&#x5728;&#x8FD9;&#x91CC;&#x8868;&#x793A;&#x7531;&#x5B83;&#x6765;&#x201C;&#x4EE3;&#x7406;&#x201D;&#x67D0;&#x4E9B;&#x64CD;&#x4F5C;&#xFF0C;&#x53EF;&#x4EE5;&#x8BD1;&#x4E3A;&#x201C;&#x4EE3;&#x7406;&#x5668;&#x201D;&#x3002;</p><ul><li><p>ES6</p><pre><code class="lang-js">  <span class="hljs-keyword">let</span> target = {
+      foo: <span class="hljs-string">&quot;Welcome, foo&quot;</span>
+  }
+  <span class="hljs-keyword">let</span> proxy = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Proxy</span>(target, {
+      get (receiver, name) {
+          <span class="hljs-keyword">return</span> name <span class="hljs-keyword">in</span> receiver ? receiver[name] : <span class="hljs-string">`Hello, <span class="hljs-subst">${name}</span>`</span>
+      }
+  })
+  proxy.foo   === <span class="hljs-string">&quot;Welcome, foo&quot;</span>
+  proxy.world === <span class="hljs-string">&quot;Hello, world&quot;</span></code></pre>
+</li></ul>
+<ul><li><p>ES5</p><pre><code class="lang-js">  <span class="hljs-comment">// no equivalent in ES5</span></code></pre>
+</li></ul>
+<h2 id="reflection">Reflection</h2><p>Reflect&#x5BF9;&#x8C61;&#x4E5F;&#x662F;ES6&#x4E3A;&#x4E86;&#x64CD;&#x4F5C;&#x5BF9;&#x8C61;&#x800C;&#x63D0;&#x4F9B;&#x7684;&#x65B0;API&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x5C06;Object&#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x4E9B;&#x660E;&#x663E;&#x5C5E;&#x4E8E;&#x8BED;&#x8A00;&#x5185;&#x90E8;&#x7684;&#x65B9;&#x6CD5;&#xFF08;&#x6BD4;&#x5982;Object.defineProperty&#xFF09;&#xFF0C;&#x653E;&#x5230;Reflect&#x5BF9;&#x8C61;&#x4E0A;&#xFF1B;&#x8BA9;Object&#x64CD;&#x4F5C;&#x90FD;&#x53D8;&#x6210;&#x51FD;&#x6570;&#x884C;&#x4E3A;&#xFF1B;Reflect&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x4E0E;Proxy&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#xFF0C;&#x53EA;&#x8981;&#x662F;Proxy&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x80FD;&#x5728;Reflect&#x5BF9;&#x8C61;&#x4E0A;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x7BA1;Proxy&#x600E;&#x4E48;&#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#xFF0C;&#x4F60;&#x603B;&#x53EF;&#x4EE5;&#x5728;Reflect&#x4E0A;&#x83B7;&#x53D6;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x3002;</p><ul><li><p>ES6</p><pre><code class="lang-js">  <span class="hljs-keyword">let</span> obj = { a: <span class="hljs-number">1</span> }
+  <span class="hljs-built_in">Object</span>.defineProperty(obj, <span class="hljs-string">&quot;b&quot;</span>, { value: <span class="hljs-number">2</span> })
+  obj[<span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&quot;c&quot;</span>)] = <span class="hljs-number">3</span>
+  <span class="hljs-built_in">Reflect</span>.ownKeys(obj) <span class="hljs-comment">// [ &quot;a&quot;, &quot;b&quot;, Symbol(c) ]</span></code></pre>
+</li></ul>
+<ul><li><p>ES5</p><pre><code class="lang-js">  <span class="hljs-keyword">var</span> obj = { a: <span class="hljs-number">1</span> };
+  <span class="hljs-built_in">Object</span>.defineProperty(obj, <span class="hljs-string">&quot;b&quot;</span>, { value: <span class="hljs-number">2</span> });
+  <span class="hljs-comment">// no equivalent in ES5</span>
+  <span class="hljs-built_in">Object</span>.getOwnPropertyNames(obj); <span class="hljs-comment">// [ &quot;a&quot;, &quot;b&quot; ]</span></code></pre>
+</li></ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="promises.html" class="navigation navigation-prev " aria-label="Previous page: 异步编程Promises">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="international.html" class="navigation navigation-next " aria-label="Next page: 国际化及本地化 Internationalization & Localization">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"元编程 Meta-Programming","level":"1.3.1.19","depth":3,"next":{"title":"国际化及本地化 Internationalization & Localization","level":"1.3.1.20","depth":3,"path":"ecmascript/es6-vs-es5/international.md","ref":"ecmascript/es6-vs-es5/international.md","articles":[]},"previous":{"title":"异步编程Promises","level":"1.3.1.18","depth":3,"path":"ecmascript/es6-vs-es5/promises.md","ref":"ecmascript/es6-vs-es5/promises.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ecmascript/es6-vs-es5/meta.md","mtime":"2016-07-23T14:00:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-07-23T14:04:03.405Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
