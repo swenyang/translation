@@ -26,13 +26,13 @@ React的运行出奇的快。但也存在一些场景，你需要极致地优化
 
 打印总体消耗的时间。如果没有传递参数，默认为从上次记录开始的所有测量。这个函数将在控制台打印排版好的信息，如下：
 
-![perf-inclusive](/assets/images/perf-inclusive.png)
+![perf-inclusive](../assets/images/perf-inclusive.png)
 
 ### `Perf.printExclusive(measurements)`
 
 `Exclusive`时间不包括挂载组件消耗的时间：处理props，`getInitialState`，调用`componentWillMount`和`componentDidMount`等。
 
-![perf-exclusive](/assets/images/perf-exclusive.png)
+![perf-exclusive](../assets/images/perf-exclusive.png)
 
 ### `Perf.printWasted(measurements)`
 
@@ -44,7 +44,7 @@ React的运行出奇的快。但也存在一些场景，你需要极致地优化
 
 打印所有底层的DOM操作，比如"set innerHTML"和"remove"。
 
-![perf-dom](/assets/images/perf-dom.png)
+![perf-dom](../assets/images/perf-dom.png)
 
 ### `Perf.printDOM(measurements)`
 
