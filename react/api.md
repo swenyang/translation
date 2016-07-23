@@ -10,7 +10,7 @@
 class Component
 ```
 
-如果使用ES6的类来编写组件，`Component`将是组件的基类。`Component`包含的API在下文将详细给出。
+如果使用ES6的类来编写组件，`Component`应当是组件的基类。`Component`包含的API在下文将详细给出。
 
 ### React.createClass
 
@@ -20,7 +20,7 @@ ReactClass createClass(object specification)
 
 根据给的的`specification`创建一个组件类。一个组件必须实现`render`方法，并在这个方法返回**单一**的子节点。子节点可以有任意深度的子结构。组件与标准原型类的一个区别是你不需要用`new`来创建组件。
 
-关于`specification`对象的更多信息可参阅[React组件和生命周期](/react/1.React组件和生命周期.md)。
+关于`specification`对象的更多信息可参阅[组件标准和生命周期](/react/component-specs-and-lifecycle.md)。
 
 ### React.createElement
 
@@ -74,7 +74,7 @@ boolean isValidElement(* object)
 
 ### React.Children
 
-`this.props.children`的数据结构是不透明的，而`React.Children`提供了一些工具来处理它。
+`this.props.children`的数据结构是不透明的，所以`React.Children`提供了一些工具来处理它。
 
 #### React.Children.map
 
@@ -98,7 +98,7 @@ React.Children.forEach(object children, function fn [, object thisArg])
 number React.Children.count(object children)
 ```
 
-返回children元素的个数。数量与`map`和`forEach`执行次数一致。
+返回children元素的个数。个数与`map`和`forEach`执行次数相同。
 
 #### React.Children.only
 
@@ -130,11 +130,12 @@ render(
 
 在指定的`container` DOM节点上渲染一个ReactElement，并返回组件的引用（无状态的函数组件将会返回`null`）。如果ReactElement之前已经在`container`渲染过，将会只更新这个组件，按需修改DOM来正确的展示React组件。如果提供了`callback`，组件渲染或更新完成后将执行它。
 
-注意：`ReactDOM.render()`将会完全控制你传递的`container`节点的内容。第一次调用时，里面所包含的任何DOM节点都会被替换，后续为了高效的更新则使用React的DOM diff算法。
-
-`ReactDOM.render()`不会修改`container`本身，只会修改其子节点。以后可能会支持只插入组件到DOM节点，但是不会覆盖其原有子节点。
-
-`ReactDOM.render()`现在会返回根组件的引用，但是使用这个返回值是一个遗留问题，应当尽量避免，因为未来React可能在某些情况会进行异步渲染。如果你需要根组件的引用，最好是附加一个`ref`来获得。
+注意：
+>`ReactDOM.render()`将会完全控制你传递的`container`节点的内容。第一次调用时，里面所包含的任何DOM节点都会被替换，后续为了高效的更新则使用React的DOM diff算法。
+>
+>`ReactDOM.render()`不会修改`container`本身，只会修改其子节点。以后可能会支持只插入组件到DOM节点，但是不会覆盖其原有子节点。
+>
+>`ReactDOM.render()`现在会返回根组件的引用，但是使用这个返回值是一个遗留问题，应当尽量避免，因为未来React可能在某些情况会进行异步渲染。如果你需要根组件的引用，最好是附加一个`ref`属性来获得。
 
 ### ReactDOM.unmountComponentAtNode
 
@@ -152,11 +153,12 @@ DOMElement findDOMNode(ReactComponent component)
 
 如果组件已经在DOM中挂载了，将返回对应的原生浏览器DOM元素。这个方法对于从DOM中读取数值非常有用，比如表单字段值和进行DOM测试。大部分情况下，你可以附加`ref`到DOM节点上来避免使用`findDOMNode`。当`render`返回`null`或`false`时，`findDOMNode`返回`null`。
 
-注意：`findDOMNode()`是可以安全访问底层的DOM节点的。大部分情况下，不推荐使用此方法，因为这样破坏了组件的抽象性。
-
-`findDOMNode()`只对已经挂载过的组件有用（放在DOM中的），如果对一个未挂载的组件上调用此方法，会抛出异常。
-
-`findDOMNode()`不能用在无状态的函数组件上。
+注意：
+>`findDOMNode()`是可以安全访问底层的DOM节点的。大部分情况下，不推荐使用此方法，因为这样破坏了组件的抽象性。
+>
+>`findDOMNode()`只对已经挂载过的组件有用（放在DOM中的），如果对一个未挂载的组件上调用此方法，会抛出异常。
+>
+>`findDOMNode()`不能用在无状态的函数组件上。
 
 ## ReactDOMServer
 

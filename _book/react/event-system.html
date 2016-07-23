@@ -1,0 +1,525 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>事件系统 · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="forms.html" />
+    
+    
+    <link rel="prev" href="vdom.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="api.html">
+            
+                <a href="api.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="component-specs-and-lifecycle.html">
+            
+                <a href="component-specs-and-lifecycle.html">
+            
+                    
+                    组件标准和生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="dom-differences.html">
+            
+                <a href="dom-differences.html">
+            
+                    
+                    与DOM的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="vdom.html">
+            
+                <a href="vdom.html">
+            
+                    
+                    React DOM（虚拟DOM）术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="event-system.html">
+            
+                <a href="event-system.html">
+            
+                    
+                    事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="forms.html">
+            
+                <a href="forms.html">
+            
+                    
+                    表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="tags-and-attributes.html">
+            
+                <a href="tags-and-attributes.html">
+            
+                    
+                    支持的Tag和Attribute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="web-components.html">
+            
+                <a href="web-components.html">
+            
+                    
+                    React与Web Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="diff-algorithm.html">
+            
+                <a href="diff-algorithm.html">
+            
+                    
+                    Diff算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="perf-addon.html">
+            
+                <a href="perf-addon.html">
+            
+                    
+                    性能检测工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ecmascript/">
+            
+                <a href="../ecmascript/">
+            
+                    
+                    ECMAScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ecmascript/ES6新特性和ES5的比较.html">
+            
+                <a href="../ecmascript/ES6新特性和ES5的比较.html">
+            
+                    
+                    ES6新特性和ES5的比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >事件系统</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4E8B;&#x4EF6;&#x7CFB;&#x7EDF;">&#x4E8B;&#x4EF6;&#x7CFB;&#x7EDF;</h1><h2 id="syntheticevent">SyntheticEvent</h2><p>&#x6240;&#x6709;&#x7684;&#x4E8B;&#x4EF6;handler&#x4F1A;&#x63A5;&#x6536;&#x4E00;&#x4E2A;<code>SyntheticEvent</code>&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;<code>SyntheticEvent</code>&#x662F;&#x5C01;&#x88C5;&#x4E86;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x539F;&#x751F;&#x4E8B;&#x4EF6;&#x7684;&#x8DE8;&#x6D4F;&#x89C8;&#x5668;&#x4E8B;&#x4EF6;&#x3002;<code>SyntheticEvent</code>&#x76F8;&#x6BD4;&#x539F;&#x751F;&#x4E8B;&#x4EF6;&#x4F18;&#x70B9;&#x5728;&#x4E8E;&#x51E0;&#x4E4E;&#x80FD;&#x5728;&#x6240;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#x8FD0;&#x884C;&#x4E00;&#x81F4;&#xFF0C;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x5B83;&#x6709;&#x548C;&#x539F;&#x751F;&#x4E8B;&#x4EF6;&#x4E00;&#x81F4;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x5305;&#x62EC;<code>stopPropagation()</code>&#x548C;<code>preventDefault()</code>&#x3002;</p><p>&#x5982;&#x679C;&#x786E;&#x5B9E;&#x9700;&#x8981;&#x8BBF;&#x95EE;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x539F;&#x751F;&#x4E8B;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>nativeEvent</code>&#x5C5E;&#x6027;&#x6765;&#x8BBF;&#x95EE;&#x83B7;&#x5F97;&#x3002;&#x6240;&#x6709;&#x7684;<code>SyntheticEvent</code>&#x90FD;&#x62E5;&#x6709;&#x4EE5;&#x4E0B;&#x7684;&#x5C5E;&#x6027;&#xFF1A;</p><pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">boolean</span> bubbles
+<span class="hljs-keyword">boolean</span> cancelable
+DOMEventTarget currentTarget
+<span class="hljs-keyword">boolean</span> defaultPrevented
+number eventPhase
+<span class="hljs-keyword">boolean</span> isTrusted
+DOMEvent nativeEvent
+<span class="hljs-keyword">void</span> <span class="hljs-title">preventDefault</span><span class="hljs-params">()</span>
+<span class="hljs-keyword">boolean</span> <span class="hljs-title">isDefaultPrevented</span><span class="hljs-params">()</span>
+<span class="hljs-keyword">void</span> <span class="hljs-title">stopPropagation</span><span class="hljs-params">()</span>
+<span class="hljs-keyword">boolean</span> <span class="hljs-title">isPropagationStopped</span><span class="hljs-params">()</span>
+DOMEventTarget target
+number timeStamp
+string type</span></code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;React v0.14&#x4E4B;&#x540E;<code>return false</code>&#x5C06;&#x4E0D;&#x4F1A;&#x518D;&#x505C;&#x6B62;&#x4E8B;&#x4EF6;&#x7684;&#x4F20;&#x64AD;&#x3002;&#x9700;&#x8981;&#x9002;&#x5F53;&#x7684;&#x624B;&#x52A8;&#x8C03;&#x7528;<code>e.stopPropagation()</code>&#x6216;<code>e.preventDefault()</code>&#x6765;&#x505C;&#x6B62;&#x4F20;&#x64AD;&#x3002;</p><h2 id="&#x4E8B;&#x4EF6;&#x7684;&#x5BF9;&#x8C61;&#x6C60;">&#x4E8B;&#x4EF6;&#x7684;&#x5BF9;&#x8C61;&#x6C60;</h2><p><code>SyntheticEvent</code>&#x5728;React&#x91CC;&#x9762;&#x6709;&#x5BF9;&#x8C61;&#x6C60;&#x6765;&#x7F13;&#x5B58;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;<code>SyntheticEvent</code>&#x53EF;&#x4EE5;&#x88AB;&#x91CD;&#x7528;&#xFF0C;&#x5728;&#x4E8B;&#x4EF6;&#x56DE;&#x8C03;&#x89E6;&#x53D1;&#x8FC7;&#x540E;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x5C5E;&#x6027;&#x5C06;&#x88AB;&#x7F6E;&#x7A7A;&#x3002;&#x5BF9;&#x8C61;&#x6C60;&#x7684;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x4F18;&#x5316;&#x6027;&#x80FD;&#xFF0C;&#x53E6;&#x4E00;&#x65B9;&#x9762;&#x4E5F;&#x610F;&#x5473;&#x7740;&#x4F60;&#x4E0D;&#x80FD;&#x5F02;&#x6B65;&#x5730;&#x8BBF;&#x95EE;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x3002;</p><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onClick</span>(<span class="hljs-params">event</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(event); <span class="hljs-comment">// =&gt; nullified object.</span>
+  <span class="hljs-built_in">console</span>.log(event.type); <span class="hljs-comment">// =&gt; &quot;click&quot;</span>
+  <span class="hljs-keyword">var</span> eventType = event.type; <span class="hljs-comment">// =&gt; &quot;click&quot;</span>
+
+  setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(event.type); <span class="hljs-comment">// =&gt; null</span>
+    <span class="hljs-built_in">console</span>.log(eventType); <span class="hljs-comment">// =&gt; &quot;click&quot;</span>
+  }, <span class="hljs-number">0</span>);
+
+  <span class="hljs-keyword">this</span>.setState({clickEvent: event}); <span class="hljs-comment">// Won&apos;t work. this.state.clickEvent will only contain null values.</span>
+  <span class="hljs-keyword">this</span>.setState({eventType: event.type}); <span class="hljs-comment">// You can still export event properties.</span>
+}</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x60F3;&#x8981;&#x5F02;&#x6B65;&#x8BBF;&#x95EE;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x7528;<code>event.persist()</code>&#xFF0C;&#x8FD9;&#x6837;&#x505A;&#x540E;<code>SyntheticEvent</code>&#x5C06;&#x88AB;&#x79FB;&#x51FA;&#x5BF9;&#x8C61;&#x6C60;&#xFF0C;&#x4ECE;&#x800C;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x4FDD;&#x6301;&#x5F15;&#x7528;&#x548C;&#x81EA;&#x7531;&#x8BBF;&#x95EE;&#x3002;</p><h2 id="&#x652F;&#x6301;&#x7684;&#x4E8B;&#x4EF6;">&#x652F;&#x6301;&#x7684;&#x4E8B;&#x4EF6;</h2><p>React&#x6807;&#x51C6;&#x5316;&#x4E86;&#x6240;&#x6709;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x4ECE;&#x800C;&#x4E8B;&#x4EF6;&#x5728;&#x6240;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x6709;&#x76F8;&#x540C;&#x7684;&#x5C5E;&#x6027;&#x3002;</p><p>&#x4E0B;&#x9762;&#x7684;&#x6240;&#x6709;&#x4E8B;&#x4EF6;&#x90FD;&#x662F;&#x5728;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x89E6;&#x53D1;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x6CE8;&#x518C;&#x5728;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#x540E;&#x52A0;<code>Capture</code>&#xFF0C;&#x6BD4;&#x5982;<code>onClick</code>=&gt;<code>onClickCapture</code>&#x3002;</p><ul><li><p>&#x526A;&#x8D34;&#x677F;&#x4E8B;&#x4EF6;</p><p>&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF1A;</p><pre><code class="lang-js">  onCopy onCut onPaste</code></pre>
+<p>&#x5C5E;&#x6027;&#xFF1A;</p><pre><code class="lang-java">  DOMDataTransfer clipboardData</code></pre>
+<ul><li>&#x590D;&#x5408;&#x4E8B;&#x4EF6;
+</li></ul>
+<p>&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF1A;</p><pre><code class="lang-js">  onCompositionEnd onCompositionStart onCompositionUpdate</code></pre>
+<p>&#x5C5E;&#x6027;&#xFF1A;</p><pre><code class="lang-java">  string data</code></pre>
+<ul><li>&#x952E;&#x76D8;&#x4E8B;&#x4EF6;
+</li></ul>
+<p>&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF1A;</p><pre><code class="lang-js">  onKeyDown onKeyPress onKeyUp</code></pre>
+<p>&#x5C5E;&#x6027;&#xFF1A;</p><pre><code class="lang-java">  <span class="hljs-function"><span class="hljs-keyword">boolean</span> altKey
+  number charCode
+  <span class="hljs-keyword">boolean</span> ctrlKey
+  <span class="hljs-keyword">boolean</span> <span class="hljs-title">getModifierState</span><span class="hljs-params">(key)</span>
+  string key
+  number keyCode
+  string locale
+  number location
+  <span class="hljs-keyword">boolean</span> metaKey
+  <span class="hljs-keyword">boolean</span> repeat
+  <span class="hljs-keyword">boolean</span> shiftKey
+  number which</span></code></pre>
+</li></ul>
+<ul><li><p>&#x7126;&#x70B9;&#x4E8B;&#x4EF6;</p><p>&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF1A;</p><pre><code class="lang-js">  onFocus onBlur</code></pre>
+<p>&#x5C5E;&#x6027;&#xFF1A;</p><pre><code class="lang-java">  DOMEventTarget relatedTarget</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x7126;&#x70B9;&#x4E8B;&#x4EF6;&#x5728;&#x6240;&#x6709;&#x7684;React DOM&#x5143;&#x7D20;&#x90FD;&#x4F1A;&#x6709;&#xFF0C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x8868;&#x5355;&#x5143;&#x7D20;&#x3002;</p></li>
+<li><p>&#x8868;&#x5355;&#x4E8B;&#x4EF6;</p><p>&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF1A;</p><pre><code class="lang-js">  onChange onInput onSubmit</code></pre>
+<p>&#x5173;&#x4E8E;&#x8868;&#x5355;&#x4E8B;&#x4EF6;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="3.React&#x8868;&#x5355;.md">React&#x8868;&#x5355;</a></p></li>
+<li><p>&#x9F20;&#x6807;&#x4E8B;&#x4EF6;</p><p>&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF1A;</p><pre><code class="lang-js">  onClick onContextMenu onDoubleClick onDrag onDragEnd onDragEnter onDragExit
+  onDragLeave onDragOver onDragStart onDrop onMouseDown onMouseEnter onMouseLeave
+  onMouseMove onMouseOut onMouseOver onMouseUp</code></pre>
+<p>&#x8DDF;&#x5E38;&#x89C4;&#x7684;&#x5192;&#x6CE1;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;<code>onMouseEnter</code>&#x548C;<code>onMouseLeave</code>&#x4E8B;&#x4EF6;&#x4ECE;&#x79BB;&#x5F00;&#x7684;&#x5143;&#x7D20;&#x4F20;&#x64AD;&#x5230;&#x8FDB;&#x5165;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x4E14;&#x6CA1;&#x6709;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x3002;</p><p>&#x5C5E;&#x6027;&#xFF1A;</p><pre><code class="lang-java">  <span class="hljs-function"><span class="hljs-keyword">boolean</span> altKey
+  number button
+  number buttons
+  number clientX
+  number clientY
+  <span class="hljs-keyword">boolean</span> ctrlKey
+  <span class="hljs-keyword">boolean</span> <span class="hljs-title">getModifierState</span><span class="hljs-params">(key)</span>
+  <span class="hljs-keyword">boolean</span> metaKey
+  number pageX
+  number pageY
+  DOMEventTarget relatedTarget
+  number screenX
+  number screenY
+  <span class="hljs-keyword">boolean</span> shiftKey</span></code></pre>
+</li></ul>
+<ul><li><p>&#x9009;&#x62E9;&#x4E8B;&#x4EF6;</p><p>&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF1A;</p><pre><code class="lang-js">  onSelect</code></pre>
+</li></ul>
+<ul><li><p>&#x89E6;&#x6478;&#x4E8B;&#x4EF6;</p><p>&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF1A;</p><pre><code class="lang-js">  onTouchCancel onTouchEnd onTouchMove onTouchStart</code></pre>
+<p>&#x5C5E;&#x6027;&#xFF1A;</p><pre><code class="lang-java">  <span class="hljs-function"><span class="hljs-keyword">boolean</span> altKey
+  DOMTouchList changedTouches
+  <span class="hljs-keyword">boolean</span> ctrlKey
+  <span class="hljs-keyword">boolean</span> <span class="hljs-title">getModifierState</span><span class="hljs-params">(key)</span>
+  <span class="hljs-keyword">boolean</span> metaKey
+  <span class="hljs-keyword">boolean</span> shiftKey
+  DOMTouchList targetTouches
+  DOMTouchList touches</span></code></pre>
+</li></ul>
+<ul><li><p>UI&#x4E8B;&#x4EF6;</p><p>&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF1A;</p><pre><code class="lang-js">  onScroll</code></pre>
+<p>&#x5C5E;&#x6027;&#xFF1A;</p><pre><code class="lang-java">  number detail
+  DOMAbstractView view</code></pre>
+</li></ul>
+<ul><li><p>&#x6EDA;&#x8F6E;&#x4E8B;&#x4EF6;</p><p>&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF1A;</p><pre><code class="lang-js">  onWheel</code></pre>
+<p>&#x5C5E;&#x6027;&#xFF1A;</p><pre><code class="lang-java">  number deltaMode
+  number deltaX
+  number deltaY
+  number deltaZ</code></pre>
+</li></ul>
+<ul><li><p>&#x5A92;&#x4F53;&#x4E8B;&#x4EF6;</p><p>&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF1A;</p><pre><code class="lang-js">  onAbort onCanPlay onCanPlayThrough onDurationChange onEmptied onEncrypted
+  onEnded onError onLoadedData onLoadedMetadata onLoadStart onPause onPlay
+  onPlaying onProgress onRateChange onSeeked onSeeking onStalled onSuspend
+  onTimeUpdate onVolumeChange onWaiting</code></pre>
+</li></ul>
+<ul><li><p>&#x56FE;&#x7247;&#x4E8B;&#x4EF6;</p><p>&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF1A;</p><pre><code class="lang-js">  onLoad onError</code></pre>
+</li></ul>
+<ul><li><p>&#x52A8;&#x753B;&#x4E8B;&#x4EF6;</p><p>&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF1A;</p><pre><code class="lang-js">  onAnimationStart onAnimationEnd onAnimationIteration</code></pre>
+<p>&#x5C5E;&#x6027;&#xFF1A;</p><pre><code class="lang-java">  string animationName
+  string pseudoElement
+  <span class="hljs-keyword">float</span> elapsedTime</code></pre>
+</li></ul>
+<ul><li><p>&#x8FC7;&#x6E21;&#x4E8B;&#x4EF6;</p><p>&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF1A;</p><pre><code class="lang-js">  onTransitionEnd</code></pre>
+<p>&#x5C5E;&#x6027;&#xFF1A;</p><pre><code class="lang-java">  string propertyName
+  string pseudoElement
+  <span class="hljs-keyword">float</span> elapsedTime</code></pre>
+</li></ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="vdom.html" class="navigation navigation-prev " aria-label="Previous page: React DOM（虚拟DOM）术语">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="forms.html" class="navigation navigation-next " aria-label="Next page: 表单">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"事件系统","level":"1.2.5","depth":2,"next":{"title":"表单","level":"1.2.6","depth":2,"path":"react/forms.md","ref":"react/forms.md","articles":[]},"previous":{"title":"React DOM（虚拟DOM）术语","level":"1.2.4","depth":2,"path":"react/vdom.md","ref":"react/vdom.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/event-system.md","mtime":"2016-07-23T11:54:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-07-23T07:37:25.934Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

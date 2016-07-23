@@ -1,4 +1,4 @@
-# Diff算法-调解更新与性能
+# Diff算法-调解组件的更新与性能
 
 React的关键设计决策是让API看起来像是每次更新都能重新渲染整个app。这使编写应用变得更加简单，但这也是很难驾驭的一个挑战。这边文章主要介绍了我们怎么用强大的启发法将一个O(n^3)复杂度的问题转变为O(n)的。
 
@@ -53,7 +53,7 @@ renderB: <div id="after" />
 => [replaceAttribute id "after"]
 ```
 
-样式方面没有使用难以理解的字符串，而是使用一个键-值对的对象。这样我们仅仅更新改变过的属性就可以了。
+样式方面我们没有使用难以理解的字符串，而是使用一个键-值对的对象。这样我们仅仅更新改变过的属性就可以了。
 
 ```js
 renderA: <div style={{color: 'red'}} />
@@ -61,7 +61,7 @@ renderB: <div style={{fontWeight: 'bold'}} />
 => [removeStyle color], [addStyle font-weight 'bold']
 ```
 
-attributes更新之后，我们会递归地更新所以子节点。
+attributes更新之后，我们会递归地更新所有子节点。
 
 ### 相同类型的自定义组件
 
@@ -91,7 +91,7 @@ renderB: <div><span>second</span><span>first</span></div>
 => [replaceAttribute textContent 'second'], [insertNode <span>first</span>]
 ```
 
-有很多算法试图找到转换元素列表需要的最小操作集合。[莱文斯坦距离](https://en.wikipedia.org/wiki/Levenshtein_distance)能通过元素插入、删除和替换在O(n^2)的复杂度下找到最小集合。但即使我们使用莱温斯坦距离，当一个节点移动到另一个地方时算法也找不出来，如果要使用算法找出这类节点复杂度就更高了。
+有很多算法试图找到转换元素列表需要的最小操作集合。[莱文斯坦距离](https://en.wikipedia.org/wiki/Levenshtein_distance)能通过元素插入、删除和替换在O(n^2)的复杂度下找到最小集合。但即使我们使用莱文斯坦距离，当一个节点移动到另一个地方时算法也找不出来，如果要使用算法找出这类节点复杂度就更高了。
 
 ### key属性
 
@@ -107,7 +107,7 @@ renderB: <div><span key="second">second</span><span key="first">first</span></di
 
 ## 权衡
 
-要注意的是调解算法是一个实现细节。React可以对每一个action都重新渲染整个app，得到的结果也会相同。为了让常规使用运行的更快，我们会定期的优化启发法。
+要注意的是调解算法是一个实现细节。React可以对每一个action都重新渲染整个app，得到的结果也会相同。为了让常规应用场景运行的更快，我们会定期的优化启发法。
 
 在当前的实现中，你可以通过key表明一颗子树在相邻节点间移动了，但是你如果你移动到其他地方（非相邻节点）key的作用就失效了，这种情况下算法将会重新渲染整个子树。
 

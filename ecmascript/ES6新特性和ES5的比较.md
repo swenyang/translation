@@ -1,4 +1,4 @@
-# ES6新特性入门教程
+# ES6新特性和ES5的比较
 本文主要译自<http://es6-features.org>，简明的介绍了ECMAScript 6\(ES6\)的新特性和ECMAScript 5\(ES5\)实现的比较，其中一部分算是语法糖\(Syntactic Sugar\)，另外一部分则是ES5没有的新特性。如果不是很清楚，更详细的ES6语言规范可以参考[阮一峰的书](https://likebeta.gitbooks.io/es6tutorial/content/docs/regex.html)。
 
 # 目录
@@ -87,12 +87,14 @@
 <h3 id="constants-1">常量</h3>
 支持常量定义（不可修改的变量），即不可重新赋值的变量。注意：仅使变量本身不可修改，其赋值内容仍然可以修改（比如赋值内容为一个object，那么这个object仍然是可以修改自己属性的）。
 
+
 - ES6
 
 	```js
 	const PI = 3.141593
 	PI > 3.0
 	```
+
 
 - ES5
 
@@ -107,6 +109,7 @@
 	})
 	PI > 3.0;
 	```
+
 
 <h2 id="scoping">作用域 Scoping</h2>
 <h3 id="scoping-1">块级作用域变量</h3>

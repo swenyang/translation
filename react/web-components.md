@@ -1,6 +1,6 @@
 # React与Web Component
 
-由于React和Web Component为了不同的目的而设计，所以对比两者必然会得出看似正确的结论。WebComponents为可复用组件提供了很强的封装性，而React则为保持DOM和数据的同步提供了一个声明式的库。这两个目的是互补的，工程师可以混合使用两个技术。作为开发者，你既可以自由的在你的WebComponents使用React，也可以自由的在React里面使用WebComponents，或者交叉使用。
+由于React和Web Component为了不同的目的而设计，所以对比两者必然会得出看似正确的结论。WebComponents为可复用组件提供了很强的封装性，而React则为保持DOM和数据的同步提供了一个声明式的库。这两个目的是互补的，工程师可以混合使用两个技术。作为开发者，你既可以自由地在你的WebComponents使用React，也可以自由地在React里面使用WebComponents，或者交叉使用两者。
 
 ## 在React里面使用Web Components
 

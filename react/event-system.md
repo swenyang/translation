@@ -1,4 +1,4 @@
-# React事件系统
+# 事件系统
 
 ## SyntheticEvent
 
@@ -6,7 +6,7 @@
 
 如果确实需要访问浏览器的原生事件，可以通过`nativeEvent`属性来访问获得。所有的`SyntheticEvent`都拥有以下的属性：
 
-```js
+```java
 boolean bubbles
 boolean cancelable
 DOMEventTarget currentTarget
@@ -63,7 +63,7 @@ React标准化了所有的事件，从而事件在所有浏览器都有相同的
 
     属性：
 
-    ```js
+    ```java
     DOMDataTransfer clipboardData
     ```
 
@@ -77,7 +77,7 @@ React标准化了所有的事件，从而事件在所有浏览器都有相同的
 
     属性：
 
-    ```js
+    ```java
     string data
     ```
 
@@ -91,7 +91,7 @@ React标准化了所有的事件，从而事件在所有浏览器都有相同的
 
     属性：
 
-    ```js
+    ```java
     boolean altKey
     number charCode
     boolean ctrlKey
@@ -117,7 +117,7 @@ React标准化了所有的事件，从而事件在所有浏览器都有相同的
 
     属性：
 
-    ```js
+    ```java
     DOMEventTarget relatedTarget
     ```
 
@@ -147,7 +147,7 @@ React标准化了所有的事件，从而事件在所有浏览器都有相同的
 
     属性：
 
-    ```js
+    ```java
     boolean altKey
     number button
     number buttons
@@ -164,6 +164,7 @@ React标准化了所有的事件，从而事件在所有浏览器都有相同的
     boolean shiftKey
     ```
 
+
 - 选择事件
 
     事件名称：
@@ -171,6 +172,7 @@ React标准化了所有的事件，从而事件在所有浏览器都有相同的
     ```js
     onSelect
     ```
+
 
 - 触摸事件
 
@@ -182,7 +184,7 @@ React标准化了所有的事件，从而事件在所有浏览器都有相同的
 
     属性：
 
-    ```js
+    ```java
     boolean altKey
     DOMTouchList changedTouches
     boolean ctrlKey
@@ -192,6 +194,7 @@ React标准化了所有的事件，从而事件在所有浏览器都有相同的
     DOMTouchList targetTouches
     DOMTouchList touches
     ```
+
 
 - UI事件
 
@@ -203,10 +206,11 @@ React标准化了所有的事件，从而事件在所有浏览器都有相同的
 
     属性：
 
-    ```js
+    ```java
     number detail
     DOMAbstractView view
     ```
+
 
 - 滚轮事件
 
@@ -218,12 +222,13 @@ React标准化了所有的事件，从而事件在所有浏览器都有相同的
 
     属性：
 
-    ```js
+    ```java
     number deltaMode
     number deltaX
     number deltaY
     number deltaZ
     ```
+
 
 - 媒体事件
 
@@ -236,6 +241,7 @@ React标准化了所有的事件，从而事件在所有浏览器都有相同的
     onTimeUpdate onVolumeChange onWaiting
     ```
 
+
 - 图片事件
 
     事件名称：
@@ -243,6 +249,7 @@ React标准化了所有的事件，从而事件在所有浏览器都有相同的
     ```js
     onLoad onError
     ```
+
 
 - 动画事件
 
@@ -254,11 +261,12 @@ React标准化了所有的事件，从而事件在所有浏览器都有相同的
 
     属性：
 
-    ```js
+    ```java
     string animationName
     string pseudoElement
     float elapsedTime
     ```
+
 
 - 过渡事件
 
@@ -270,7 +278,7 @@ React标准化了所有的事件，从而事件在所有浏览器都有相同的
 
     属性：
 
-    ```js
+    ```java
     string propertyName
     string pseudoElement
     float elapsedTime

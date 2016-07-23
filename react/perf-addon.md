@@ -1,6 +1,6 @@
 # 性能检测工具
 
-React的运行出奇的快。但也存在一些场景，你需要极致优化app的性能，为此React提供了`shouldComponentUpdate`钩子以让你给React Diff算法提供优化的提示。
+React的运行出奇的快。但也存在一些场景，你需要极致地优化app的性能，为此React提供了`shouldComponentUpdate`钩子以让你给React Diff算法提供优化的提示。
 
 为了让用户能概览app总体的性能情况，`ReactPerf`是一个能告诉你你应当优化哪些地方的分析工具。
 

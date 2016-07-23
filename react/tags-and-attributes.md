@@ -38,7 +38,7 @@ React支持所有的`data-*`和`aria-*`属性，也包括下面列表的每一�
 
 注意：为了符合DOM API标准，所有的属性都是驼峰式的，除了`class`和`for`分别对应为`className`和`htmlFor`。
 
-支持的事件可以参阅[React事件系统](/react/2.React事件系统.md)
+支持的事件可以参阅[React事件系统](/react/event-system.md)
 
 - HTML Attributes
 

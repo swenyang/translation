@@ -119,14 +119,14 @@ render() {
 
 在HTML中，`<textarea>`的值通常用子元素来设置：
 
-```js
+```html
 <!-- antipattern: DO NOT DO THIS! -->
 <textarea name="description">This is the description.</textarea>
 ```
 
 对于HTML来说，这样方便地让开发者提供多行数据。但是，由于React就是Javascript，我们没有字符串的限制，可以用`\n`表示换行。对于`value`和`defaultValue`的存在，子元素方式就会变得很奇怪。因此，最好不要通过子元素的方式来设置`<textarea>`的值：
 
-```js
+```html
 <textarea name="description" value="This is a description." />
 ```
 
@@ -136,7 +136,7 @@ render() {
 
 在HTML的`<select>`中，选择的值是通过`<option>`的`selected`属性来设置的。React为了更好的操作组件，采用了如下的形式：
 
-```js
+```html
 <select value="B">
     <option value="A">Apple</option>
     <option value="B">Banana</option>

@@ -1,4 +1,4 @@
-# React组件和生命周期
+# 组件标准和生命周期
 
 ## 组件标准
 
@@ -10,11 +10,11 @@
     ReactElement render()
     ```
 
-    `render()`方法是必须的，它可以读取`this.props`和`this.state`的数据并返回一个单一的子元素，子元素可以是DOM组件的虚拟表现（比如`<div \/>`）或者其他复合组件。
+    `render()`方法是必须的，它可以读取`this.props`和`this.state`的数据并返回一个单一的子元素，子元素可以是DOM组件的虚拟表现（比如`<div />`）或者其他复合组件。
 
     如果什么都不想渲染就让`render()`返回`null`或者`false`。此时，`ReactDOM.findDOMNode(this)`也将返回`null`。
 
-    `render()`应当是一个纯函数，它不会改变组件的`state`，每次调用都会返回相同的结果（`props`和`state`不变），也不会对DOM进行读写，或者与浏览器交互（比如`settimeout`）。如果需要与浏览器交互，请在`componentDidMount()`或者其他生命周期方法进行。保持`render()`的纯粹，使得服务端渲染更易实践，组件本身更简单易读。
+    `render()`应当是一个纯函数，它不会改变组件的`state`，每次调用都会返回相同的结果（`props`和`state`不变时），也不会对DOM进行读写，或者与浏览器交互（比如`settimeout`）。如果需要与浏览器交互，请在`componentDidMount()`或者其他生命周期方法进行。保持`render()`的纯粹，使得服务端渲染更易实践，组件本身更简单易读。
 
 - `getInitialState`
 
@@ -34,7 +34,7 @@
     }
     ```
 
-    设置组件的初始`props`，上述写法需要开启ES6的类属性语法`babel-plugin-transform-class-properties`
+    设置组件的初始`props`，上述写法需要开启ES6的类属性语法`babel-plugin-transform-class-properties`。
 
 - `propTypes`
 

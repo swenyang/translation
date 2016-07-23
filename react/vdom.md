@@ -16,7 +16,7 @@
 var root = React.createElement('div');
 ```
 
-要往DOM里面一个新的React树，需要创建`ReactElement`然后将其和一个常规DOM `Element`（`HTMLElement`或者`SVGElement`）传递给`ReactDOM.render`方法。不要混淆`ReactElement`和`Element`。`ReactElement`是DOM `Element`轻量的、无状态的、不可更改的、虚拟的展现。它是一个虚拟的DOM。
+要往DOM里面插入一个新的React树，需要创建`ReactElement`然后将其和一个常规DOM `Element`（`HTMLElement`或者`SVGElement`）传递给`ReactDOM.render`方法。不要混淆`ReactElement`和`Element`。`ReactElement`是DOM `Element`轻量的、无状态的、不可更改的、虚拟的展现。它是一个虚拟的DOM。
 
 ```js
 ReactDOM.render(root, document.getElementById('example'));

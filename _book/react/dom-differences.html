@@ -1,0 +1,423 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>与DOM的区别 · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="vdom.html" />
+    
+    
+    <link rel="prev" href="component-specs-and-lifecycle.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="api.html">
+            
+                <a href="api.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="component-specs-and-lifecycle.html">
+            
+                <a href="component-specs-and-lifecycle.html">
+            
+                    
+                    组件标准和生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="dom-differences.html">
+            
+                <a href="dom-differences.html">
+            
+                    
+                    与DOM的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="vdom.html">
+            
+                <a href="vdom.html">
+            
+                    
+                    React DOM（虚拟DOM）术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="event-system.html">
+            
+                <a href="event-system.html">
+            
+                    
+                    事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="forms.html">
+            
+                <a href="forms.html">
+            
+                    
+                    表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="tags-and-attributes.html">
+            
+                <a href="tags-and-attributes.html">
+            
+                    
+                    支持的Tag和Attribute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="web-components.html">
+            
+                <a href="web-components.html">
+            
+                    
+                    React与Web Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="diff-algorithm.html">
+            
+                <a href="diff-algorithm.html">
+            
+                    
+                    Diff算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="perf-addon.html">
+            
+                <a href="perf-addon.html">
+            
+                    
+                    性能检测工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ecmascript/">
+            
+                <a href="../ecmascript/">
+            
+                    
+                    ECMAScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ecmascript/ES6新特性和ES5的比较.html">
+            
+                <a href="../ecmascript/ES6新特性和ES5的比较.html">
+            
+                    
+                    ES6新特性和ES5的比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >与DOM的区别</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4E0E;dom&#x7684;&#x533A;&#x522B;">&#x4E0E;DOM&#x7684;&#x533A;&#x522B;</h1><p>&#x51FA;&#x4E8E;&#x6027;&#x80FD;&#x548C;&#x8DE8;&#x6D4F;&#x89C8;&#x5668;&#x517C;&#x5BB9;&#x6027;&#x7684;&#x8003;&#x8651;&#xFF0C;React&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x5957;&#x4E0E;&#x6D4F;&#x89C8;&#x5668;&#x65E0;&#x5173;&#x7684;&#x4E8B;&#x4EF6;&#x548C;DOM&#x7CFB;&#x7EDF;&#x3002;&#x540C;&#x65F6;&#xFF0C;React&#x7684;&#x5B9E;&#x73B0;&#x53BB;&#x9664;&#x4E86;&#x4E00;&#x4E9B;&#x6D4F;&#x89C8;&#x5668;DOM&#x5B9E;&#x73B0;&#x6BD4;&#x8F83;&#x7CDF;&#x7CD5;&#x7684;&#x65B9;&#x9762;&#xFF0C;&#x5177;&#x4F53;&#x5982;&#x4E0B;&#x3002;</p><ul><li><p>&#x6240;&#x6709;DOM&#x7684;property&#x548C;attribute&#xFF0C;&#x5305;&#x62EC;&#x4E8B;&#x4EF6;handler&#xFF0C;&#x90FD;&#x662F;&#x9A7C;&#x5CF0;&#x5F0F;&#x7684;&#xFF0C;&#x4E0E;&#x6807;&#x51C6;&#x7684;Javascript&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;&#x8FD9;&#x4E00;&#x70B9;&#x6211;&#x4EEC;&#x4E0E;HTML&#x6807;&#x51C6;&#x4E0D;&#x540C;&#xFF0C;&#x56E0;&#x4E3A;HTML&#x6807;&#x51C6;&#x5728;&#x8FD9;&#x65B9;&#x9762;&#x662F;&#x4E0D;&#x4E00;&#x81F4;&#x7684;&#x3002;&#x53EA;&#x6709;&#x4E00;&#x79CD;&#x4F8B;&#x5916;&#xFF0C;<code>data-*</code>&#x548C;<code>aria-*</code>&#x5C5E;&#x6027;&#x9075;&#x5FAA;HTML&#x6807;&#x51C6;&#xFF0C;&#x5E94;&#x5F53;&#x53EA;&#x5305;&#x542B;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x3002;</p></li>
+<li><p><code>style</code>&#x5C5E;&#x6027;&#x63A5;&#x53D7;&#x7684;&#x4E0D;&#x662F;CSS&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x4E2A;Javascript&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x5C5E;&#x6027;&#x540D;&#x4E5F;&#x662F;&#x9A7C;&#x5CF0;&#x5F0F;&#x7684;&#x3002;&#x8FD9;&#x4E0E;DOM&#x7684;<code>style</code>Javascript&#x5C5E;&#x6027;&#x4FDD;&#x6301;&#x4E86;&#x4E00;&#x81F4;&#x6027;&#xFF0C;&#x66F4;&#x6709;&#x6548;&#x7387;&#xFF0C;&#x5E76;&#x4E14;&#x9632;&#x8303;&#x4E86;XSS&#x5B89;&#x5168;&#x6F0F;&#x6D1E;&#x3002;</p></li>
+<li><p>&#x7531;&#x4E8E;<code>class</code>&#x548C;<code>for</code>&#x662F;Javascript&#x7684;&#x5173;&#x952E;&#x5B57;&#xFF0C;JSX&#x4E2D;&#x4E3A;&#x5185;&#x7F6E;DOM&#x8282;&#x70B9;&#x5B9E;&#x73B0;&#x7684;&#x7EC4;&#x4EF6;&#x5E94;&#x5F53;&#x5BF9;&#x5E94;&#x4F7F;&#x7528;&#x5C5E;&#x6027;&#x540D;<code>className</code>&#x548C;<code>htmlFor</code>&#xFF08;&#x6BD4;&#x5982;<code>&lt;div className=&quot;foo&quot; /&gt;</code>&#xFF09;&#x3002;&#x800C;&#x81EA;&#x5B9A;&#x4E49;&#x5143;&#x7D20;&#x5E94;&#x5F53;&#x76F4;&#x63A5;&#x4F7F;&#x7528;<code>class</code>&#x548C;<code>for</code>&#xFF08;&#x6BD4;&#x5982;<code>&lt;my-tag class=&quot;foo&quot; /&gt;</code>&#xFF09;&#x3002;</p></li>
+<li><p>&#x6240;&#x6709;&#x7684;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x90FD;&#x9075;&#x5FAA;W3C&#x6807;&#x51C6;&#xFF0C;&#x6240;&#x6709;&#x4E8B;&#x4EF6;&#xFF08;&#x5305;&#x62EC;submit&#xFF09;&#x7684;&#x5192;&#x6CE1;&#x4E5F;&#x6B63;&#x786E;&#x9075;&#x5FAA;W3C&#x6807;&#x51C6;&#x3002;&#x8BE6;&#x60C5;&#x8BF7;&#x53C2;&#x9605;<a href="event-system.html">React&#x4E8B;&#x4EF6;&#x7CFB;&#x7EDF;</a>&#x3002;</p></li>
+<li><p><code>onChange</code>&#x4E8B;&#x4EF6;&#x7684;&#x884C;&#x4E3A;&#x5982;&#x4F60;&#x6240;&#x671B;&#xFF1A;&#x4EFB;&#x4F55;&#x65F6;&#x5019;&#x8868;&#x5355;&#x5B57;&#x6BB5;&#x6539;&#x53D8;&#x4E86;&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x50CF;DOM&#x4E00;&#x6837;&#x5728;blur&#x7684;&#x65F6;&#x5019;&#x624D;&#x89E6;&#x53D1;&#x3002;&#x76EE;&#x524D;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x884C;&#x4E3A;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E0D;&#x5F53;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x4E4B;&#x6240;&#x4EE5;&#x8981;&#x4E0D;&#x4E00;&#x6837;&#x662F;&#x56E0;&#x4E3A;React&#x4F9D;&#x8D56;&#x4E8E;<code>onChange</code>&#x4E8B;&#x4EF6;&#x6765;&#x5B9E;&#x65F6;&#x54CD;&#x5E94;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;&#x3002;&#x8BE6;&#x60C5;&#x53EF;&#x53C2;&#x8003;<a href="forms.html">React&#x8868;&#x5355;</a>&#x3002;</p></li>
+<li><p>&#x8868;&#x5355;&#x8F93;&#x5165;&#x5C5E;&#x6027;&#x89C4;&#x5B9A;&#x4E3A;<code>value</code>&#x3001;<code>checked</code>&#x7B49;&#xFF0C;<code>&lt;textarea</code>&#x4E5F;&#x4E0D;&#x4F8B;&#x5916;&#x3002;</p></li></ul>
+<h1 id="&#x7279;&#x6B8A;&#x7684;&#x975E;dom-attribute">&#x7279;&#x6B8A;&#x7684;&#x975E;DOM attribute</h1><p>&#x9664;&#x4E86;&#x5E38;&#x89C4;&#x7684;attribute&#x5916;&#xFF0C;React&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x5728;DOM&#x91CC;&#x9762;&#x4E0D;&#x5B58;&#x5728;&#x7684;attribute&#xFF1A;</p><ul><li><p><code>key</code>&#xFF1A;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x9009;&#x7684;&#x3001;&#x552F;&#x4E00;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x3002;&#x5728;<code>render</code>&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x7EC4;&#x4EF6;&#x53EF;&#x80FD;&#x4F1A;&#x6253;&#x4E71;&#xFF0C;&#x6839;&#x636E;diff&#x7B97;&#x6CD5;&#x53EF;&#x80FD;&#x4F1A;&#x9500;&#x6BC1;&#x6216;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x3002;&#x6301;&#x7EED;&#x7684;&#x8D4B;&#x4E88;<code>key</code>&#x5C5E;&#x6027;&#x80FD;&#x591F;&#x4FDD;&#x8BC1;&#x7EC4;&#x4EF6;&#x4E0D;&#x7528;&#x9500;&#x6BC1;&#x6216;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x3002;</p></li>
+<li><p><code>ref</code>&#xFF1A;&#x7EC4;&#x4EF6;&#x901A;&#x8FC7;<code>ref</code>&#x4FDD;&#x6301;&#x5BF9;&#x8BE5;&#x5143;&#x7D20;&#x5728;&#x865A;&#x62DF;DOM&#x91CC;&#x9762;&#x7684;&#x5F15;&#x7528;&#x3002;</p></li>
+<li><p><code>dangerouslySetInnerHTML</code>&#xFF1A;&#x63D0;&#x4F9B;&#x76F4;&#x63A5;&#x63D2;&#x5165;&#x539F;&#x59CB;HTML&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x8DDF;&#x4E00;&#x4E9B;DOM&#x5B57;&#x7B26;&#x4E32;&#x64CD;&#x4F5C;&#x5E93;&#x534F;&#x4F5C;&#x3002;</p></li></ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="component-specs-and-lifecycle.html" class="navigation navigation-prev " aria-label="Previous page: 组件标准和生命周期">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="vdom.html" class="navigation navigation-next " aria-label="Next page: React DOM（虚拟DOM）术语">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"与DOM的区别","level":"1.2.3","depth":2,"next":{"title":"React DOM（虚拟DOM）术语","level":"1.2.4","depth":2,"path":"react/vdom.md","ref":"react/vdom.md","articles":[]},"previous":{"title":"组件标准和生命周期","level":"1.2.2","depth":2,"path":"react/component-specs-and-lifecycle.md","ref":"react/component-specs-and-lifecycle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/dom-differences.md","mtime":"2016-07-23T11:36:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-07-23T07:37:25.934Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

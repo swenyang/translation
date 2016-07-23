@@ -1,0 +1,456 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>组件标准和生命周期 · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="dom-differences.html" />
+    
+    
+    <link rel="prev" href="api.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="api.html">
+            
+                <a href="api.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="component-specs-and-lifecycle.html">
+            
+                <a href="component-specs-and-lifecycle.html">
+            
+                    
+                    组件标准和生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="dom-differences.html">
+            
+                <a href="dom-differences.html">
+            
+                    
+                    与DOM的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="vdom.html">
+            
+                <a href="vdom.html">
+            
+                    
+                    React DOM（虚拟DOM）术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="event-system.html">
+            
+                <a href="event-system.html">
+            
+                    
+                    事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="forms.html">
+            
+                <a href="forms.html">
+            
+                    
+                    表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="tags-and-attributes.html">
+            
+                <a href="tags-and-attributes.html">
+            
+                    
+                    支持的Tag和Attribute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="web-components.html">
+            
+                <a href="web-components.html">
+            
+                    
+                    React与Web Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="diff-algorithm.html">
+            
+                <a href="diff-algorithm.html">
+            
+                    
+                    Diff算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="perf-addon.html">
+            
+                <a href="perf-addon.html">
+            
+                    
+                    性能检测工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ecmascript/">
+            
+                <a href="../ecmascript/">
+            
+                    
+                    ECMAScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ecmascript/ES6新特性和ES5的比较.html">
+            
+                <a href="../ecmascript/ES6新特性和ES5的比较.html">
+            
+                    
+                    ES6新特性和ES5的比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >组件标准和生命周期</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7EC4;&#x4EF6;&#x6807;&#x51C6;&#x548C;&#x751F;&#x547D;&#x5468;&#x671F;">&#x7EC4;&#x4EF6;&#x6807;&#x51C6;&#x548C;&#x751F;&#x547D;&#x5468;&#x671F;</h1><h2 id="&#x7EC4;&#x4EF6;&#x6807;&#x51C6;">&#x7EC4;&#x4EF6;&#x6807;&#x51C6;</h2><p>&#x7EC4;&#x4EF6;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;<code>render</code>&#x65B9;&#x6CD5;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x6027;&#x7684;&#x5305;&#x542B;&#x5176;&#x4ED6;&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;&#x3002;</p><ul><li><p><code>render</code></p><pre><code class="lang-js">  ReactElement render()</code></pre>
+<p><code>render()</code>&#x65B9;&#x6CD5;&#x662F;&#x5FC5;&#x987B;&#x7684;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;<code>this.props</code>&#x548C;<code>this.state</code>&#x7684;&#x6570;&#x636E;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5355;&#x4E00;&#x7684;&#x5B50;&#x5143;&#x7D20;&#xFF0C;&#x5B50;&#x5143;&#x7D20;&#x53EF;&#x4EE5;&#x662F;DOM&#x7EC4;&#x4EF6;&#x7684;&#x865A;&#x62DF;&#x8868;&#x73B0;&#xFF08;&#x6BD4;&#x5982;<code>&lt;div /&gt;</code>&#xFF09;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x590D;&#x5408;&#x7EC4;&#x4EF6;&#x3002;</p><p>&#x5982;&#x679C;&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x60F3;&#x6E32;&#x67D3;&#x5C31;&#x8BA9;<code>render()</code>&#x8FD4;&#x56DE;<code>null</code>&#x6216;&#x8005;<code>false</code>&#x3002;&#x6B64;&#x65F6;&#xFF0C;<code>ReactDOM.findDOMNode(this)</code>&#x4E5F;&#x5C06;&#x8FD4;&#x56DE;<code>null</code>&#x3002;</p><p><code>render()</code>&#x5E94;&#x5F53;&#x662F;&#x4E00;&#x4E2A;&#x7EAF;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x7EC4;&#x4EF6;&#x7684;<code>state</code>&#xFF0C;&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x90FD;&#x4F1A;&#x8FD4;&#x56DE;&#x76F8;&#x540C;&#x7684;&#x7ED3;&#x679C;&#xFF08;<code>props</code>&#x548C;<code>state</code>&#x4E0D;&#x53D8;&#x65F6;&#xFF09;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x5BF9;DOM&#x8FDB;&#x884C;&#x8BFB;&#x5199;&#xFF0C;&#x6216;&#x8005;&#x4E0E;&#x6D4F;&#x89C8;&#x5668;&#x4EA4;&#x4E92;&#xFF08;&#x6BD4;&#x5982;<code>settimeout</code>&#xFF09;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x4E0E;&#x6D4F;&#x89C8;&#x5668;&#x4EA4;&#x4E92;&#xFF0C;&#x8BF7;&#x5728;<code>componentDidMount()</code>&#x6216;&#x8005;&#x5176;&#x4ED6;&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x3002;&#x4FDD;&#x6301;<code>render()</code>&#x7684;&#x7EAF;&#x7CB9;&#xFF0C;&#x4F7F;&#x5F97;&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#x66F4;&#x6613;&#x5B9E;&#x8DF5;&#xFF0C;&#x7EC4;&#x4EF6;&#x672C;&#x8EAB;&#x66F4;&#x7B80;&#x5355;&#x6613;&#x8BFB;&#x3002;</p></li>
+<li><p><code>getInitialState</code></p><pre><code class="lang-js">  <span class="hljs-keyword">this</span>.state = {
+      <span class="hljs-comment">// write your state</span>
+  }</code></pre>
+<p>&#x8BBE;&#x7F6E;&#x7EC4;&#x4EF6;&#x7684;&#x521D;&#x59CB;<code>state</code>&#xFF0C;&#x4E00;&#x822C;&#x653E;&#x5728;&#x7EC4;&#x4EF6;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;<code>contructor(props)</code>&#x8FDB;&#x884C;&#x3002;</p></li>
+<li><p><code>getDefaultProps</code></p><pre><code class="lang-js">  <span class="hljs-keyword">static</span> defaultProps = {
+      <span class="hljs-comment">// write your default props</span>
+  }</code></pre>
+<p>&#x8BBE;&#x7F6E;&#x7EC4;&#x4EF6;&#x7684;&#x521D;&#x59CB;<code>props</code>&#xFF0C;&#x4E0A;&#x8FF0;&#x5199;&#x6CD5;&#x9700;&#x8981;&#x5F00;&#x542F;ES6&#x7684;&#x7C7B;&#x5C5E;&#x6027;&#x8BED;&#x6CD5;<code>babel-plugin-transform-class-properties</code>&#x3002;</p></li>
+<li><p><code>propTypes</code></p><pre><code class="lang-js">  <span class="hljs-keyword">static</span> propTypes = {
+      <span class="hljs-comment">// claim your prop types</span>
+  }</code></pre>
+<p>&#x58F0;&#x660E;&#x7EC4;&#x4EF6;<code>props</code>&#x7684;&#x5B57;&#x6BB5;&#x548C;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x540C;&#x6837;&#x8981;&#x5F00;&#x542F;ES6&#x7C7B;&#x5C5E;&#x6027;&#x8BED;&#x6CD5;&#x3002;</p></li>
+<li><p><code>mixins</code></p><p>ES6&#x8BED;&#x6CD5;&#x4E0D;&#x652F;&#x6301;&#x7EC4;&#x4EF6;&#x7684;<code>mixins</code></p></li>
+<li><p><code>statics</code></p><pre><code class="lang-js">  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Example</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+      <span class="hljs-keyword">static</span> foo = () =&gt; {
+         <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;bar&apos;</span>)
+      }
+  }
+
+  Example.foo()</code></pre>
+<p>&#x58F0;&#x660E;&#x7EC4;&#x4EF6;&#x7684;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#xFF0C;ES6&#x8BED;&#x6CD5;&#x5F00;&#x542F;&#x7C7B;&#x5C5E;&#x6027;&#x8BED;&#x6CD5;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x5B9E;&#x73B0;&#x3002;</p></li></ul>
+<h2 id="&#x7EC4;&#x4EF6;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;">&#x7EC4;&#x4EF6;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;</h2><p>&#x4E0D;&#x540C;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;&#x4F1A;&#x5728;&#x7EC4;&#x4EF6;&#x7684;&#x4E0D;&#x540C;&#x65F6;&#x523B;&#x8C03;&#x7528;&#x3002;</p><ul><li><p>&#x6302;&#x8F7D;&#xFF1A;<code>componentWillMount</code></p><pre><code class="lang-js">  <span class="hljs-keyword">void</span> componentWillMount()</code></pre>
+<p>&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x90FD;&#x53EA;&#x4F1A;&#x8C03;&#x7528;&#x4E00;&#x6B21;&#xFF0C;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x53D1;&#x751F;&#x524D;&#x89E6;&#x53D1;&#x3002;&#x5982;&#x679C;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x521D;&#x59CB;&#x5316;&#x6216;&#x66F4;&#x65B0;&#x7EC4;&#x4EF6;&#x7684;<code>state</code>&#xFF0C;<code>render()</code>&#x4F1A;&#x4F7F;&#x7528;&#x66F4;&#x65B0;&#x540E;&#x7684;<code>state</code>&#xFF0C;&#x5E76;&#x4E14;&#x53EA;&#x6E32;&#x67D3;&#x4E00;&#x6B21;&#xFF08;&#x5C3D;&#x7BA1;<code>state</code>&#x66F4;&#x65B0;&#x4E86;&#xFF09;&#x3002;</p></li>
+<li><p>&#x6302;&#x8F7D;&#xFF1A;<code>componentDidMount</code></p><pre><code class="lang-js">  <span class="hljs-keyword">void</span> componentDidMount()</code></pre>
+<p>&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x53EA;&#x4F1A;&#x8C03;&#x7528;&#x4E00;&#x6B21;&#xFF08;&#x670D;&#x52A1;&#x7AEF;&#x4E0D;&#x4F1A;&#x8C03;&#x7528;&#xFF09;&#xFF0C;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x53D1;&#x751F;&#x540E;&#x89E6;&#x53D1;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x91CC;&#x9762;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5230;&#x7EC4;&#x4EF6;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;<code>refs</code>&#xFF08;&#x6BD4;&#x5982;&#x8BBF;&#x95EE;&#x5E95;&#x5C42;&#x7684;DOM&#xFF09;&#x3002;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;<code>componentDidMount()</code>&#x4F1A;&#x5728;&#x7236;&#x7EC4;&#x4EF6;&#x7684;<code>componentDidMount()</code>&#x4E4B;&#x524D;&#x8C03;&#x7528;&#x3002;</p><p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x6574;&#x5408;&#x5176;&#x4ED6;Javascript&#x6846;&#x67B6;&#xFF0C;&#x8C03;&#x7528;<code>settimeout</code>&#x6216;&#x8005;<code>setInterval</code>&#xFF0C;&#x6216;&#x8005;&#x53D1;&#x9001;AJAX&#x8BF7;&#x6C42;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x3002;</p></li>
+<li><p>&#x66F4;&#x65B0;&#xFF1A;<code>componentWillReceiveProps</code></p><pre><code class="lang-js">  <span class="hljs-keyword">void</span> componentWillReceiveProps(object nextProps)</code></pre>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x63A5;&#x6536;&#x5230;&#x65B0;&#x7684;<code>props</code>&#x65F6;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x524D;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x3002;&#x65E7;&#x7684;<code>props</code>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>this.props</code>&#x8BBF;&#x95EE;&#xFF0C;&#x65B0;&#x7684;<code>props</code>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53C2;&#x6570;<code>nextProps</code>&#x8BBF;&#x95EE;&#x3002;</p><p>&#x7EC4;&#x4EF6;&#x63A5;&#x6536;&#x5230;&#x65B0;&#x7684;<code>props</code>&#x65F6;&#xFF0C;<code>render()</code>&#x5C06;&#x4F1A;&#x89E6;&#x53D1;&#xFF0C;&#x5728;<code>render()</code>&#x89E6;&#x53D1;&#x524D;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x91CC;&#x901A;&#x8FC7;<code>this.setState()</code>&#x66F4;&#x65B0;&#x7EC4;&#x4EF6;&#x7684;<code>state</code>&#xFF0C;&#x6B64;&#x65F6;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x989D;&#x5916;&#x7684;&#x6E32;&#x67D3;&#x3002;</p><pre><code class="lang-js">  componentWillReceiveProps(nextProps) {
+    <span class="hljs-keyword">this</span>.setState({
+      likesIncreasing: nextProps.likeCount &gt; <span class="hljs-keyword">this</span>.props.likeCount
+    })
+  }</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5E38;&#x89C1;&#x7684;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x662F;&#x8BA4;&#x4E3A;&#x6B64;&#x65B9;&#x6CD5;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#x7EC4;&#x4EF6;&#x7684;<code>props</code>&#x4E00;&#x5B9A;&#x6539;&#x53D8;&#x4E86;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x5E76;&#x4E0D;&#x662F;&#x3002;&#x53E6;&#x4E00;&#x65B9;&#x9762;&#xFF0C;<code>state</code>&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x6CA1;&#x6709;&#x7C7B;&#x4F3C;&#x7684;<code>componentWillReceiveState</code>&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;<code>props</code>&#x6539;&#x53D8;&#x65F6;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;<code>state</code>&#x6539;&#x53D8;&#xFF0C;&#x4F46;&#x662F;&#x53CD;&#x8FC7;&#x6765;&#x4E0D;&#x6210;&#x7ACB;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;<code>state</code>&#x6539;&#x53D8;&#x65F6;&#x505A;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#xFF0C;&#x5728;<code>componentWillUpdate</code>&#x8FDB;&#x884C;&#x3002;</p></li>
+<li><p>&#x66F4;&#x65B0;&#xFF1A;<code>shouldComponentUpdate</code></p><pre><code class="lang-js">  boolean shouldComponentUpdate(object nextProps, object nextState)</code></pre>
+<p>&#x5F53;&#x63A5;&#x6536;&#x5230;&#x65B0;&#x7684;<code>props</code>&#x6216;&#x8005;<code>state</code>&#x65F6;&#xFF0C;&#x89E6;&#x53D1;<code>render()</code>&#x524D;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x6216;&#x8005;&#x4F7F;&#x7528;<code>forceRender()</code>&#xFF0C;&#x6B64;&#x65B9;&#x6CD5;&#x4E0D;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;</p><p>&#x5F53;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;<code>props</code>&#x6216;<code>state</code>&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x7EC4;&#x4EF6;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;&#xFF0C;&#x4F7F;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;<code>return false</code>&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x89E6;&#x53D1;&#x6E32;&#x67D3;&#x3002;&#x5982;&#x679C;<code>return false</code>&#xFF0C;&#x672C;&#x6B21;<code>render()</code>&#x5C06;&#x4F1A;&#x8DF3;&#x8FC7;&#xFF0C;<code>componentWillUpdate</code>&#x548C;<code>componentDidUpdate</code>&#x4E5F;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x3002;</p><p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;<code>shouldComponentUpdate</code>&#x59CB;&#x7EC8;&#x4F1A;&#x8FD4;&#x56DE;<code>true</code>&#xFF0C;&#x907F;&#x514D;&#x4E00;&#x4E9B;&#x4E0D;&#x6613;&#x5BDF;&#x89C9;&#x7684;bug&#x3002;&#x5982;&#x679C;&#x9047;&#x5230;&#x4E86;&#x6027;&#x80FD;&#x7684;&#x74F6;&#x9888;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x7EC4;&#x4EF6;&#x6570;&#x91CF;&#x975E;&#x5E38;&#x591A;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>shouldComponentUpdate</code>&#x6765;&#x4F18;&#x5316;&#x4F60;&#x7684;app&#x3002;</p></li>
+<li><p>&#x66F4;&#x65B0;&#xFF1A;<code>componentWillUpdate</code></p><pre><code class="lang-js">  <span class="hljs-keyword">void</span> componentWillUpdate(object nextProps, object nextState)</code></pre>
+<p>&#x5F53;&#x63A5;&#x6536;&#x5230;&#x65B0;&#x7684;<code>props</code>&#x6216;&#x8005;<code>state</code>&#x65F6;&#xFF0C;&#x89E6;&#x53D1;<code>render()</code>&#x524D;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x524D;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x3002;&#x53EF;&#x4EE5;&#x5728;&#x6B64;&#x65B9;&#x6CD5;&#x505A;&#x4E00;&#x4E9B;&#x66F4;&#x65B0;&#x524D;&#x7684;&#x51C6;&#x5907;&#x3002;</p><p>&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x91CC;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;<code>this.setState()</code>&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;<code>props</code>&#x6539;&#x53D8;&#x65F6;&#x66F4;&#x65B0;<code>state</code>&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;<code>componentWillReceiveProps</code>&#x3002;</p></li>
+<li><p>&#x66F4;&#x65B0;&#xFF1A;<code>componentDidUpdate</code></p><pre><code class="lang-js">  <span class="hljs-keyword">void</span> componentDidUpdate(object prevProps, object prevState)</code></pre>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x66F4;&#x65B0;&#x63A8;&#x9001;&#x5230;DOM&#x540E;&#xFF0C;&#x6B64;&#x65B9;&#x6CD5;&#x4F1A;&#x88AB;&#x7ACB;&#x5373;&#x8C03;&#x7528;&#x3002;&#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x3002;&#x7EC4;&#x4EF6;&#x66F4;&#x65B0;&#x540E;&#xFF0C;&#x6B64;&#x65B9;&#x6CD5;&#x662F;&#x64CD;&#x4F5C;DOM&#x7684;&#x597D;&#x65F6;&#x673A;&#x3002;</p></li>
+<li><p>&#x5378;&#x8F7D;&#xFF1A;<code>componentWillUnmount</code></p><pre><code class="lang-js">  <span class="hljs-keyword">void</span> componentWillUnmount()</code></pre>
+<p>&#x7EC4;&#x4EF6;&#x4ECE;DOM&#x4E2D;&#x5378;&#x8F7D;&#x524D;&#xFF0C;&#x6B64;&#x65B9;&#x6CD5;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E2D;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;&#x6E05;&#x7406;&#x8BA1;&#x65F6;&#x5668;&#xFF0C;&#x6216;<code>componentDidMount</code>&#x521B;&#x5EFA;&#x7684;DOM&#x5143;&#x7D20;&#x3002;</p></li></ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="api.html" class="navigation navigation-prev " aria-label="Previous page: API">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="dom-differences.html" class="navigation navigation-next " aria-label="Next page: 与DOM的区别">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"组件标准和生命周期","level":"1.2.2","depth":2,"next":{"title":"与DOM的区别","level":"1.2.3","depth":2,"path":"react/dom-differences.md","ref":"react/dom-differences.md","articles":[]},"previous":{"title":"API","level":"1.2.1","depth":2,"path":"react/api.md","ref":"react/api.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/component-specs-and-lifecycle.md","mtime":"2016-07-23T11:03:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-07-23T07:37:25.934Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

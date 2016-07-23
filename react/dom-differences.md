@@ -8,9 +8,9 @@
 
 - 由于`class`和`for`是Javascript的关键字，JSX中为内置DOM节点实现的组件应当对应使用属性名`className`和`htmlFor`（比如`<div className="foo" />`）。而自定义元素应当直接使用`class`和`for`（比如`<my-tag class="foo" />`）。
 
-- 所有的事件对象都遵循W3C标准，所有事件（包括submit）的冒泡也正确遵循W3C标准。详情请参阅[React事件系统](/react/2.React事件系统.md)。
+- 所有的事件对象都遵循W3C标准，所有事件（包括submit）的冒泡也正确遵循W3C标准。详情请参阅[React事件系统](/react/event-system.md)。
 
-- `onChange`事件的行为如你所望：任何时候表单字段改变了，就会触发这个事件，而不是像DOM一样在blur的时候才触发。目前的浏览器行为实际上是不当的，我们之所以要不一样是因为React依赖于`onChange`事件来实时响应用户的输入。详情可参考[React表单](/react/3.React表单.md)。
+- `onChange`事件的行为如你所望：任何时候表单字段改变了，就会触发这个事件，而不是像DOM一样在blur的时候才触发。目前的浏览器行为实际上是不当的，我们之所以要不一样是因为React依赖于`onChange`事件来实时响应用户的输入。详情可参考[React表单](/react/forms.md)。
 
 - 表单输入属性规定为`value`、`checked`等，`<textarea`也不例外。
 
