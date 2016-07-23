@@ -2,15 +2,15 @@
 
 React的运行出奇的快。但也存在一些场景，你需要极致地优化app的性能，为此React提供了`shouldComponentUpdate`钩子以让你给React Diff算法提供优化的提示。
 
-为了让用户能概览app总体的性能情况，`ReactPerf`是一个能告诉你你应当优化哪些地方的分析工具。
+`ReactPerf`是一个能让用户能概览app总体的性能情况，从而告诉你应当优化哪些地方的分析工具。
 
 可以参阅这两篇[Benchling工程团队](http://benchling.engineering/)的文章来获得关于性能工具更深度的知识：[Performance Engineering with React](http://benchling.engineering/performance-engineering-with-react/)和[A Deep Dive into React Perf Debugging](http://benchling.engineering/deep-dive-react-perf-debugging/)。
 
 ## 开发版本 vs. 生产版本
 
-如果你在对React app进行基准测试或查看性能问题，确保你是在用压缩过的生产版本。开发版本包括了一些有用的额外警告，但也会因为开销而更慢一点。
+如果你在对React app进行基准测试或查看性能问题，确保你是在用压缩过的生产版本。开发版本包括了一些有用的额外警告，但也会因为额外开销而更慢一点。
 
-但是，这篇文章要介绍的性能工具只能在开发版本的React使用。所以，这个分析工具只能推断你的app里面*相对*比较消耗性能的部分。
+不过，这篇文章要介绍的性能工具只能在开发版本的React使用。所以，这个分析工具只能推断你的app里面**相对**比较消耗性能的部分。
 
 ## 常用的API
 
@@ -38,7 +38,7 @@ React的运行出奇的快。但也存在一些场景，你需要极致地优化
 
 **分析工具中最有用的部分。**
 
-`Wasted`时间是指花在组件上、但组件实际没有渲染任何东西的，比如`render`一直没有变化，所以也不需要处理DOM。
+`Wasted`时间是指花在实际没有渲染任何东西的组件上的时间，比如组件的`render`一直没有变化，也不需要处理DOM。
 
 ### `Perf.printOperations(measurements)`
 
