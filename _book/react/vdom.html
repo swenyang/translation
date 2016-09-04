@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="event-system.html" />
+    <link rel="next" href="component-specs-and-lifecycle.html" />
     
     
-    <link rel="prev" href="dom-differences.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -116,12 +116,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="api.html">
+        <li class="chapter active" data-level="1.2.1" data-path="vdom.html">
             
-                <a href="api.html">
+                <a href="vdom.html">
             
                     
-                    API
+                    React DOM（虚拟DOM）术语
             
                 </a>
             
@@ -155,20 +155,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4" data-path="vdom.html">
-            
-                <a href="vdom.html">
-            
-                    
-                    React DOM（虚拟DOM）术语
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.5" data-path="event-system.html">
+        <li class="chapter " data-level="1.2.4" data-path="event-system.html">
             
                 <a href="event-system.html">
             
@@ -181,7 +168,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="forms.html">
+        <li class="chapter " data-level="1.2.5" data-path="forms.html">
             
                 <a href="forms.html">
             
@@ -194,38 +181,51 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7" data-path="tags-and-attributes.html">
+        <li class="chapter " data-level="1.2.6" data-path="diff-algorithm.html">
+            
+                <a href="diff-algorithm.html">
+            
+                    
+                    协调算法（Diff算法）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="fiber.html">
+            
+                <a href="fiber.html">
+            
+                    
+                    React Fiber架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="api.html">
+            
+                <a href="api.html">
+            
+                    
+                    React API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="tags-and-attributes.html">
             
                 <a href="tags-and-attributes.html">
             
                     
                     支持的Tag和Attribute
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.8" data-path="web-components.html">
-            
-                <a href="web-components.html">
-            
-                    
-                    React与Web Component
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.9" data-path="diff-algorithm.html">
-            
-                <a href="diff-algorithm.html">
-            
-                    
-                    Diff算法
             
                 </a>
             
@@ -239,6 +239,19 @@
             
                     
                     性能检测工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="web-components.html">
+            
+                <a href="web-components.html">
+            
+                    
+                    React与Web Component
             
                 </a>
             
@@ -735,12 +748,12 @@ type ReactFunctionalComponent&lt;TProps&gt; = (TProps) =&gt; ReactElement;</code
 
             
                 
-                <a href="dom-differences.html" class="navigation navigation-prev " aria-label="Previous page: 与DOM的区别">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: React">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="event-system.html" class="navigation navigation-next " aria-label="Next page: 事件系统">
+                <a href="component-specs-and-lifecycle.html" class="navigation navigation-next " aria-label="Next page: 组件标准和生命周期">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -751,7 +764,7 @@ type ReactFunctionalComponent&lt;TProps&gt; = (TProps) =&gt; ReactElement;</code
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"React DOM（虚拟DOM）术语","level":"1.2.4","depth":2,"next":{"title":"事件系统","level":"1.2.5","depth":2,"path":"react/event-system.md","ref":"react/event-system.md","articles":[]},"previous":{"title":"与DOM的区别","level":"1.2.3","depth":2,"path":"react/dom-differences.md","ref":"react/dom-differences.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/vdom.md","mtime":"2016-07-23T11:42:21.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-07-31T02:37:07.643Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React DOM（虚拟DOM）术语","level":"1.2.1","depth":2,"next":{"title":"组件标准和生命周期","level":"1.2.2","depth":2,"path":"react/component-specs-and-lifecycle.md","ref":"react/component-specs-and-lifecycle.md","articles":[]},"previous":{"title":"React","level":"1.2","depth":1,"path":"react/README.md","ref":"react/README.md","articles":[{"title":"React DOM（虚拟DOM）术语","level":"1.2.1","depth":2,"path":"react/vdom.md","ref":"react/vdom.md","articles":[]},{"title":"组件标准和生命周期","level":"1.2.2","depth":2,"path":"react/component-specs-and-lifecycle.md","ref":"react/component-specs-and-lifecycle.md","articles":[]},{"title":"与DOM的区别","level":"1.2.3","depth":2,"path":"react/dom-differences.md","ref":"react/dom-differences.md","articles":[]},{"title":"事件系统","level":"1.2.4","depth":2,"path":"react/event-system.md","ref":"react/event-system.md","articles":[]},{"title":"表单","level":"1.2.5","depth":2,"path":"react/forms.md","ref":"react/forms.md","articles":[]},{"title":"协调算法（Diff算法）","level":"1.2.6","depth":2,"path":"react/diff-algorithm.md","ref":"react/diff-algorithm.md","articles":[]},{"title":"React Fiber架构","level":"1.2.7","depth":2,"path":"react/fiber.md","ref":"react/fiber.md","articles":[]},{"title":"React API","level":"1.2.8","depth":2,"path":"react/api.md","ref":"react/api.md","articles":[]},{"title":"支持的Tag和Attribute","level":"1.2.9","depth":2,"path":"react/tags-and-attributes.md","ref":"react/tags-and-attributes.md","articles":[]},{"title":"性能检测工具","level":"1.2.10","depth":2,"path":"react/perf-addon.md","ref":"react/perf-addon.md","articles":[]},{"title":"React与Web Component","level":"1.2.11","depth":2,"path":"react/web-components.md","ref":"react/web-components.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/vdom.md","mtime":"2016-07-23T11:42:21.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-04T15:45:56.992Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

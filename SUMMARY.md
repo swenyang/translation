@@ -1,16 +1,17 @@
 # Summary
 
 * [React](/react/README.md)
-    * [API](/react/api.md)
+    * [React DOM（虚拟DOM）术语](/react/vdom.md)
     * [组件标准和生命周期](/react/component-specs-and-lifecycle.md)
     * [与DOM的区别](/react/dom-differences.md)
-    * [React DOM（虚拟DOM）术语](/react/vdom.md)
     * [事件系统](/react/event-system.md)
     * [表单](/react/forms.md)
+    * [协调算法（Diff算法）](/react/diff-algorithm.md)
+    * [React Fiber架构](/react/fiber.md)
+    * [React API](/react/api.md)
     * [支持的Tag和Attribute](/react/tags-and-attributes.md)
-    * [React与Web Component](/react/web-components.md)
-    * [Diff算法](/react/diff-algorithm.md)
     * [性能检测工具](/react/perf-addon.md)
+    * [React与Web Component](/react/web-components.md)
 
 * [Web](/web/README.md)
     * [浏览器的坐标系统](/web/coordinates.md)

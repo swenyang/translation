@@ -2,7 +2,7 @@
 
 ## 引言
 
-React Fiber是React核心算法的重写，目前还在发展中。它是React团队过去两年研究的高峰。
+React Fiber是React核心算法的重写，目前还在开发中。它是React团队过去两年研究的高峰。
 
 React Fiber的目标是增强对于某些领域的适应性，比如动画、布局和手势等。它的重要特性是**增量渲染**：将渲染事务分块并分布到多个帧去完成的能力。
 
@@ -18,7 +18,7 @@ Fiber引入了几个新颖的概念，单单看代码是很难理解的。本文
 
 这也是一项进行中的工作。**Fiber也是一个开发中的项目，在完成之前有可能还会有重大的重构**。所以我在此为它的设计写的文档也是进行中的。非常欢迎提出优化和建议。
 
-我的目标是读完这篇文档后，你能够理解Fiber足够深来读懂[它的实现](https://github.com/facebook/react/commits/master/src/renderers/shared/fiber)，最终甚至能回来给React做一些贡献。
+我的目标是读完这篇文档后，你能够理解Fiber足够深来读懂[它的实现](https://github.com/facebook/react/commits/master/src/renderers/shared/fiber)，最终甚至能够返回来给React做一些贡献。
 
 ## 必要的知识
 
@@ -37,54 +37,54 @@ Fiber引入了几个新颖的概念，单单看代码是很难理解的。本文
 
 ### 什么是协调算法
 
-#### 协调算法(reconciliation)
+- 协调算法(reconciliation)
 
-React用以比较两棵树的算法，来决定哪些部分需要更改。
+    React用以比较两棵树的算法，其决定哪些部分需要更改。
 
-#### 更新(update)
+- 更新(update)
 
-即渲染React app的数据发生的一个改变。通常是`setState`的结果。最终会导致重新渲染。
+    即渲染React app的数据发生的一个改变。通常是`setState`的结果。最终会导致重新渲染。
 
-React API的核心思想是让更新能引发整个app及时的重新渲染。这将允许开发者作出声明式的推断，而不是担心app从一个状态切换到另一个状态时过渡的效率（A到B，B到C，C到A等等）。
+React API的核心思想是让更新能引发整个app及时的重新渲染。这将允许开发者作出声明式的推断，而不用担心app从一个状态切换到另一个状态时过渡的效率（A到B，B到C，C到A等等）。
 
 实际上，对于每一次改变都重新渲染app只对一些小型应用有用；现实中，这是极度浪费性能的。React使用了一些优化，使得保持高性能的同时能够达到类似重新渲染整个app的效果。这些优化就是**协调算法**的一部分。
 
-协调算法是基于通常被称为“虚拟DOM”技术的。一个高阶的阐述：当你渲染一个React app的时候，会生成app描述的节点树并保存在内存中。然后这个树被输出到渲染环境——比如，在浏览器应用中，它被翻译为一堆DOM操作。当一个app更新时（一般是通过`setState`），就产生了一棵新树。新树和旧树会进行比较，计算需要哪些操作来更新app。
+协调算法是基于通常被称为“虚拟DOM”技术的。一个高阶的描述是：当你渲染一个React app的时候，会生成app描述的节点树并保存在内存中。然后这个树被输出到渲染环境——比如，在浏览器应用中，它被翻译为一堆DOM操作。当一个app更新时（一般是通过`setState`），就产生了一棵新树。新树和旧树会进行比较，计算需要哪些操作来更新app。
 
-虽然Fiber是协调算法的推倒重写，[React文档]((/react/diff-algorithm.md))中的高阶知识还是一致的。主要的两点是：
+虽然Fiber是协调算法的推倒重写，关于[React文档](/react/diff-algorithm.md))中的高阶知识还是一致的。主要的两点是：
 
 - 不同类型的组件很大程度上将会产生不同的树。React将不会比较他们，而是直接用新的完全替代旧的。
 - 列表的diff使用key。Key应当是稳定、可预测、并且唯一的。
 
-### 协调算法vs渲染
+### 协调算法 vs 渲染
 
 DOM只是React可以输出的渲染环境之一，其他的一些主要目标包括通过React Native输出到原生的iOS和Android视图。（这也就是为什么“虚拟DOM”是有点用词不当的）
 
-React支持这么多目标的原因是因为它将协调算法和渲染设计成不同的阶段。协调算法负责计算一棵树哪些部分更改了；渲染器则利用该信息来实际更新app。
+React支持这么多目标的原因是因为它将协调算法和渲染设计成了不同的阶段。协调算法负责计算一棵树哪些部分更改了；渲染器则利用该信息来实际更新app。
 
 这个分离意味着React DOM和React Native能共享React核心提供的协调算法，而使用它们各自的渲染器。
 
-Fiber重构了协调器。它不是渲染需要首要考虑的，但渲染器需要改变来支持（并且利用）新的架构。
+Fiber重构了协调器。Fiber不是渲染需要首要考虑的，但渲染器需要改变来支持（并且利用）新的架构。
 
 ### 调度(Scheduling)
 
-#### 调度(scheduling)
+- 调度(scheduling)
 
-决定事务什么时候执行的过程。
+    决定事务什么时候执行的过程。
 
-#### 事务(work)
+- 事务(work)
 
-必须执行的计算。事务一般是由update引起的（比如`setState`）。
+    必须执行的计算。事务一般是由update引起的（比如`setState`）。
 
 React的[设计原则文档](https://facebook.github.io/react/contributing/design-principles.html#scheduling)在这方面写的很好，我引用如下：
 
->在当前的实现中，React递归的遍历节点树，在一个tick调用整棵新树的渲染函数。但是未来有可能推迟一些更新来避免掉帧。
+>在当前的实现中，React递归遍历节点树，在一个tick内调用整棵新树的渲染函数。但是未来有可能推迟一些更新来避免掉帧。
 >
 >这是React设计的一个常见主题。一些流行的库采用"push"方法，在新的数据就绪的时候就执行计算。React仍然使用"pull"方法，计算可以推迟到需要的时候才执行。
 >
 >React不是通用的数据处理库。它是用以建立用户界面的库。我们认为在一个app中，知道计算是相关还是不相关的是独一无二的重要。
 >
->如果某些东西在屏幕外面，我们可以延迟它相关的所有逻辑。如果数据到达的比帧率要快，我们可以合并和批处理更新。我们可以优先处理用户交互的事务（比如点击按钮引起的动画），次要处理没那么重要的背景事务（比如渲染刚从网络上返回的数据）来避免掉帧。
+>如果某些东西超出了屏幕显示，我们可以延迟它相关的所有逻辑。如果数据到达的比帧率要快，我们可以合并和批处理更新。我们可以优先处理用户交互的事务（比如点击按钮引起的动画），次要处理没那么重要的背景事务（比如渲染刚从网络上返回的数据）来避免掉帧。
 
 关键点在于：
 
@@ -102,7 +102,7 @@ React现在没有很重要地利用调度；一个更新会引发整个子树被
 
 我们将要讨论React Fiber架构的核心部分。Fibers是比应用开发者通常思考的部分要低很多的底层抽象。如果你发现很难理解它，不要丧气。多尝试几次，最终你就能理解。（如果你最后懂了，请提些建议来改进这节内容）
 
-Here we go!
+出发！
 
 <hr/>
 
@@ -151,6 +151,104 @@ v = f(d)
 
 #### `type`和`key`
 
+fiber的`type`和`key`的作用和React元素一样。（实际上，一个fiber从组件创建时，这两个字段会直接复制过来）
 
+fiber的`type`描述了它对应的组件。对于复合组件，`type`就是复合函数或组件的class。对于宿主组件（`div`, `span`等），`type`是一个字符串。
 
-本文翻译自<https://github.com/acdlite/react-fiber-architecture>
+从概念上来说，`type`是执行会被堆栈结构跟踪的函数（即在`v = f(d)`里面的）。
+
+除了`type`之外，`key`是在协调算法中用来决定fiber是否可以重用的字段。
+
+#### `child`和`sibling`
+
+这些字段指向其他的fiber，描述的是fiber的递归树结构。
+
+子fiber(`child` fiber)指的是组件的`render`方法返回来的值。比如在下面的样例中`Parent`的子fiber就是`Child`。
+
+```js
+function Parent() {
+  return <Child />
+}
+```
+
+兄弟fiber(`sibling` fiber)指代的是`render`方法返回多个子节点的情况（Fiber中的新特性！）：
+
+```js
+function Parent() {
+  return [<Child1 />, <Child2 />]
+}
+```
+
+兄弟fiber形成一个单链表，链表头就是第一个子节点。在上面的例子中，`Parent`的子节点是`Child1`，`Child1`的兄弟节点是`Child2`。
+
+回顾我们前面的函数类比，你可以把子fiber当做是一个[尾调用函数](https://en.wikipedia.org/wiki/Tail_call)。
+
+#### `return`
+
+返回fiber(`return` fiber)是指程序处理完当前的fiber后应当处理的下一个fiber。理论上和一个堆栈结构的返回地址一样。也可以认为是父fiber。
+
+如果一个fiber有多个子fiber，每个子fiber的返回fiber都是它的父fiber。所以在我们上一个例子中，`Child1`和`Child2`的返回fiber都是`Parent`。
+
+#### `pendingProps`和`memoizedProps`
+
+概念上来说，props就是一个函数的参数。一个fiber的`pendingProps`会在它开始执行处设置，`memoizedProps`则会在执行结尾处设置。当到来的`pendingProps`和上一个`memoizedProps`相等时，它意味着fiber的上一次输出可以重用，避免不必要的事务。
+
+#### `pendingWorkPriority`
+
+指示fiber代表的事务优先级的一个数字。[React优先级](https://github.com/facebook/react/blob/master/src/renderers/shared/fiber/ReactPriorityLevel.js)模块列举了不同的优先级和它们代表的意义。
+
+除了用0表示`NoWork`之外，越大的数字代表了越低的优先级。例如，你可以用下面的函数来检查一个fiber的优先级是不是不低于给定的等级：
+
+```js
+function matchesPriority(fiber, priority) {
+  return fiber.pendingWorkPriority !== 0 &&
+         fiber.pendingWorkPriority <= priority
+}
+```
+
+这个函数仅仅是作说明用，它实际上不属于React Fiber代码库。
+
+调度器使用这个优先级字段来搜索下一个要执行的事务。搜索算法会在将来的章节讨论。
+
+#### `alternate`
+
+- `flush`
+
+    冲洗一个fiber就是渲染输出结果到屏幕上。
+
+- `work-in-progress`
+
+    进行中的fiber代表一个未处理完毕的fiber，概念上来说就是一个还未返回的堆栈结构。
+
+在任意一个时刻，一个组件实例最多有两个fiber对应着它：当前fiber，冲洗的fiber和进行中的fiber。
+
+当前fiber的替代(`alternate`)就是进行中的fiber，进行中的fiber的替代就是当前fiber。
+
+一个fiber的替代是通过`cloneFiber`函数懒创建的。`cloneFiber`会尝试重用fiber的替代（如果存在）来最小化分配空间，而不是总创建新的对象。
+
+你应当把`alternate`当做是一个实现细节，但它在代码里面出现了很多次，所以值得在这里讨论。
+
+#### `output`
+
+- `host component`
+
+    宿主组件(`host component`)是React应用的叶节点。它们是跟特定的渲染环境相关的（比如，在浏览器应用中，宿主组件是指`div`, `span`等）。在JSX中，它们是用小写字母的tag名称表示的。
+
+概念上来说，一个fiber的输出结果就是一个函数的返回值。
+
+每个fiber最终都会有输出结果，但是输出结果是仅由叶节点的宿主组件创建的。然后输出结果会向上转移到整个树。
+
+输出结果就是最终交给渲染器的东西，然后渲染器能够将更改冲洗到渲染环境。定义输出结果怎么样创建和更新就是渲染器的职责了。
+
+## 未来的章节
+
+上面就是至今为止的内容了，但是这个文档还远未接近完成。未来的章节将会描述贯穿整个生命周期和更新使用的算法。将覆盖的主题包括：
+
+- 调度器怎么样找到下一个要执行的事务单元
+- 整个fiber树的优先级怎么跟踪和传播
+- 调度器怎么样知道什么时候暂停和继续事务
+- 事务是怎么冲洗和标记为完成的
+- 附带后果（比如声明周期方法）是怎么样工作的
+- 什么是协同程序，和它是怎么样用来实现一些特性比如上下文(context)和布局(layout)的
+
+本文翻译自<https://github.com/acdlite/react-fiber-architecture>，欢迎斧正。
